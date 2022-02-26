@@ -1,0 +1,91 @@
+@import url("https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@300;400;600;700;800&display=swap");
+* {
+  font-family: "Nunito Sans", sans-serif;
+}
+
+nav {
+  position: relative;
+  z-index: 1;
+  padding: 0 40px;
+}
+@media (max-width: 500px) {
+  nav {
+    padding: 0 12px;
+  }
+}
+nav .navbar-toggler {
+  color: #fff;
+}
+nav .navbar-toggler:focus {
+  outline: none;
+  box-shadow: none;
+}
+nav .navbar-collapse .navbar-nav {
+  display: flex;
+  -moz-column-gap: 40px;
+       column-gap: 40px;
+}
+@media only screen and (min-width: 1000px) and (max-width: 1200px) {
+  nav .navbar-collapse .navbar-nav {
+    -moz-column-gap: 18px;
+         column-gap: 18px;
+  }
+}
+nav .navbar-collapse .nav-link,
+nav .navbar-collapse a {
+  font-weight: 600;
+  color: #fff !important;
+  font-size: 16px;
+}
+nav .navbar-collapse .btn-login {
+  font-weight: 700;
+  font-size: 14px;
+  outline: 1px solid #fff;
+  border-radius: 24px;
+  padding: 10px 24px;
+  text-align: center;
+  text-transform: capitalize;
+}
+
+a {
+  text-decoration: none;
+}
+
+.hero {
+  background: linear-gradient(249.77deg, #0094FF -1.99%, #007AFF 43.52%, #026CE8 95.86%), #F0F7FF;
+  padding: 24px 0 78px;
+  position: relative;
+  overflow: hidden;
+}
+@media (max-width: 500px) {
+  .hero {
+    padding: 24px 12px 78px;
+  }
+}
+.hero .ornament {
+  position: absolute;
+  z-index: 0;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+}
+.hero .banner-link {
+  position: relative;
+  z-index: 10;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  overflow-x: auto;
+  justify-content: center;
+  gap: 40px;
+  padding: 12px 0;
+  background: #0057B2;
+}
+.hero .banner-link .items {
+  font-weight: 600;
+  font-size: 16px;
+  color: #fff;
+}
+.hero header {
+  padding-top: 64px;
+}/*# sourceMappingURL=niagahoster.css.map */

@@ -1,19 +1,21 @@
 <?php
 
-namespace App\View\Components\Organism;
+namespace App\View\Components\Atoms;
 
 use Illuminate\View\Component;
 
-class Footer extends Component
+class Link extends Component
 {
     /**
      * Create a new component instance.
      *
      * @return void
      */
-    public function __construct()
+
+    public $href;
+    public function __construct($href)
     {
-        //
+        $this->href = $href;
     }
 
     /**
@@ -23,6 +25,6 @@ class Footer extends Component
      */
     public function render()
     {
-        return view('components.organism.footer');
+        return view('components.atoms.link');
     }
 }

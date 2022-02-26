@@ -1,21 +1,19 @@
 <?php
 
-namespace App\View\Components\Atom;
+namespace App\View\Components\Organisms;
 
 use Illuminate\View\Component;
 
-class Link extends Component
+class ArticleSection extends Component
 {
     /**
      * Create a new component instance.
      *
      * @return void
      */
-
-    public $href;
-    public function __construct($href)
+    public function __construct()
     {
-        $this->href = $href;
+        //
     }
 
     /**
@@ -25,6 +23,6 @@ class Link extends Component
      */
     public function render()
     {
-        return view('components.atom.link');
+        return view('components.organisms.article-section');
     }
 }

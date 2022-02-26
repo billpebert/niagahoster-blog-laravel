@@ -8,38 +8,38 @@
     </button>
     <div class="collapse navbar-collapse mt-4    mt-lg-0" id="navbarNavAltMarkup">
       <div class="navbar-nav mx-auto">
-        <x-atom.link href="{{ route('home') }}" class="nav-link">
+        <x-atoms.link href="{{ route('home') }}" class="nav-link">
             Home
-        </x-atom.link>
-        <x-atom.link href="{{ route('home') }}" class="nav-link">
+        </x-atoms.link>
+        <x-atoms.link href="{{ route('home') }}" class="nav-link">
             VPS
-        </x-atom.link>
-        <x-atom.link href="{{ route('home') }}" class="nav-link">
+        </x-atoms.link>
+        <x-atoms.link href="{{ route('home') }}" class="nav-link">
             Domain
-        </x-atom.link>
-        <x-atom.link href="{{ route('home') }}" class="nav-link">
+        </x-atoms.link>
+        <x-atoms.link href="{{ route('home') }}" class="nav-link">
             Website
-        </x-atom.link>
-        <x-atom.link href="{{ route('home') }}" class="nav-link">
+        </x-atoms.link>
+        <x-atoms.link href="{{ route('home') }}" class="nav-link">
             Kemitraan
-        </x-atom.link>
-        <x-atom.link href="{{ route('home') }}" class="nav-link">
+        </x-atoms.link>
+        <x-atoms.link href="{{ route('home') }}" class="nav-link">
             Wawasan
-        </x-atom.link>
-        <x-atom.link href="{{ route('home') }}" class="nav-link">
+        </x-atoms.link>
+        <x-atoms.link href="{{ route('home') }}" class="nav-link">
             Acara
-        </x-atom.link>
+        </x-atoms.link>
       </div>
       <div class="d-flex flex-column flex-lg-row align-items-lg-center gap-4 my-3 my-lg-0">
-        <x-atom.link href="#">
+        <x-atoms.link href="#">
             <img src="{{ asset('assets/icons/ic-cart.svg') }}" alt="">
-        </x-atom.link>
-        <x-atom.link href="#" class="d-flex align-items-center">
+        </x-atoms.link>
+        <x-atoms.link href="#" class="d-flex align-items-center">
             ID <img src="{{ asset('assets/icons/ic-arrow_down.svg') }}" class="ms-2" alt="">
-        </x-atom.link>
-        <x-atom.link href="#" class="btn-login">
+        </x-atoms.link>
+        <x-atoms.link href="#" class="btn-login">
             <span>Login</span>
-        </x-atom.link>
+        </x-atoms.link>
       </div>
     </div>
   </div>

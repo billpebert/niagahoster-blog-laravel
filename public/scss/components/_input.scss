@@ -1,0 +1,37 @@
+input::placeholder {
+    color: $gray;
+    opacity: 1;
+    /* Firefox */
+}
+
+input:-ms-input-placeholder {
+    /* Internet Explorer 10-11 */
+    color: $gray;
+}
+
+input::-ms-input-placeholder {
+    /* Microsoft Edge */
+    color: $gray;
+}
+
+.input {
+    border-radius: 30px;
+    border: 0;
+    background-repeat: no-repeat;
+    outline: 2px solid $input-outline;
+    outline-offset: -2px;
+
+    &:focus {
+        outline: 2px solid $hoster-blue;
+        outline-offset: -2px;
+    }
+}
+
+.input-search {
+    @extend .input;
+    @extend .input-search;
+    padding: 12px 32px;
+    font-size: 16px;
+    color: $black;
+    background-position: calc(100% - 32px) center;
+}

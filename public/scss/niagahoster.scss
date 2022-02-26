@@ -3,6 +3,7 @@
 
 @import 'components/navbar';
 @import 'components/footer';
+@import 'components/input';
 
 a {
     text-decoration: none;
@@ -47,5 +48,26 @@ a {
 
     header {
         padding-top: 64px;
+        color: $white;
+        max-width: 540px;
+        margin: 0 auto;
+        position: relative;
+
+        .headline {
+            font-weight: 700;
+            font-size: 56px;
+            text-align: center;
+            line-height: 64px;
+        }
+
+        .hero-caption {
+            font-size: 16px;
+            line-height: 24px;
+            margin: 32px 0px 60px;
+            text-align: center
+        }
     }
+
 }
+
+@import 'components/section-article';

@@ -153,6 +153,13 @@ a {
   text-align: center;
 }
 
+.title-section, .articles-preview .all-article .title, .articles-preview .article-section .head-section span {
+  font-weight: 700;
+  font-size: 32px;
+  line-height: 42px;
+  color: #29384E;
+}
+
 .articles-preview {
   padding: 80px 0;
 }
@@ -161,12 +168,6 @@ a {
 }
 .articles-preview .article-section .head-section {
   margin-bottom: 36px;
-}
-.articles-preview .article-section .head-section span {
-  font-weight: 700;
-  font-size: 32px;
-  line-height: 42px;
-  color: #29384E;
 }
 .articles-preview .article-section .articles .article-item {
   -moz-column-gap: 60px;
@@ -207,6 +208,12 @@ a {
   color: #29384E;
   font-size: 12px;
 }
+.articles-preview .article-section .articles .article-item .left-side .article-detail .date,
+.articles-preview .article-section .articles .article-item .left-side .article-detail .duration {
+  width: -webkit-max-content;
+  width: -moz-max-content;
+  width: max-content;
+}
 .articles-preview .article-section .articles .article-item .left-side .article-detail .niaga-badge {
   letter-spacing: 0.5%;
   color: #007AFF;
@@ -230,6 +237,51 @@ a {
   color: #007AFF;
   padding: 12px 40px;
   border-radius: 30px;
+  transition: ease-out 300ms;
+}
+.articles-preview .article-section .toggle-allticle:hover {
+  background: #F2F2F2;
+}
+.articles-preview .article-section .toggle-allticle:focus {
+  background: transparent;
+  outline: 2px solid #ECECEC;
+}
+.articles-preview .subscribe {
+  border-radius: 24px;
+  padding: 36px;
+  background: linear-gradient(249.77deg, #0094FF -1.99%, #007DFF 43.52%, #026CE8 95.86%);
+  box-shadow: 0px 32px 72px rgba(0, 87, 178, 0.16);
+  gap: 46px;
+}
+.articles-preview .subscribe .title {
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 32px;
+  color: #fff;
+}
+.articles-preview .subscribe .caption {
+  font-size: 16px;
+  color: #E0EFFF;
+}
+.articles-preview .subscribe .btn-subs {
+  padding: 12px 64px;
+  border-radius: 100px;
+  background: #FF9800;
+  box-shadow: 0px 8px 10px rgba(255, 176, 77, 0.32);
+  text-align: center;
+  font-size: 20px;
+  color: #fff;
+  font-weight: 700;
+  transition: ease-out 300ms;
+}
+.articles-preview .subscribe .btn-subs:hover {
+  background: #ED8E01;
+}
+.articles-preview .subscribe .btn-subs:focus {
+  outline: 2.5px solid #fff;
+}
+.articles-preview .all-article {
+  padding-top: 80px;
 }
 .articles-preview .blog-category {
   padding: 16px;

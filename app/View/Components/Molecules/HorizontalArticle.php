@@ -12,8 +12,8 @@ class HorizontalArticle extends Component
      * @return void
      */
 
-    public $author, $avatar, $title, $paragraph, $category, $date, $time, $thumbnail;
-    public function __construct($author, $avatar, $title, $paragraph, $category, $date, $time, $thumbnail)
+    public $author, $avatar, $title, $paragraph, $category, $date, $time, $thumbnail, $href;
+    public function __construct($author, $avatar, $title, $paragraph, $category, $date, $time, $thumbnail, $href)
     {
         $this->author = $author;
         $this->avatar = $avatar;
@@ -23,6 +23,7 @@ class HorizontalArticle extends Component
         $this->date = $date;
         $this->time = $time;
         $this->thumbnail = $thumbnail;
+        $this->href = $href;
     }
 
     /**

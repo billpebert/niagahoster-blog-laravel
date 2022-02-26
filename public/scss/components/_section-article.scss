@@ -1,3 +1,10 @@
+.title-section {
+    font-weight: 700;
+    font-size: 32px;
+    line-height: 42px;
+    color: $black;
+}
+
 .articles-preview {
     padding: 80px 0;
 
@@ -8,10 +15,7 @@
             margin-bottom: 36px;
 
             span {
-                font-weight: 700;
-                font-size: 32px;
-                line-height: 42px;
-                color: $black;
+                @extend .title-section;
             }
         }
 
@@ -58,6 +62,11 @@
                         color: $black;
                         font-size: 12px;
 
+                        .date,
+                        .duration {
+                            width: max-content;
+                        }
+
                         .niaga-badge {
                             letter-spacing: 0.5%;
                             color: $hoster-blue;
@@ -89,6 +98,64 @@
             color: $hoster-blue;
             padding: 12px 40px;
             border-radius: 30px;
+            transition: ease-out 300ms;
+
+            &:hover {
+                background: #F2F2F2;
+            }
+
+            &:focus {
+                background: transparent;
+                outline: 2px solid #ECECEC;
+            }
+        }
+    }
+
+    .subscribe {
+        border-radius: 24px;
+        padding: 36px;
+        background: $card-background;
+        box-shadow: $blue-shadow;
+        gap: 46px;
+
+        .title {
+            font-weight: 700;
+            font-size: 24px;
+            line-height: 32px;
+            color: $white;
+        }
+
+        .caption {
+            font-size: 16px;
+            color: $light-blue;
+        }
+
+        .btn-subs {
+            padding: 12px 64px;
+            border-radius: 100px;
+            background: $hoster-yellow;
+            box-shadow: $yello-shadow;
+            text-align: center;
+            font-size: 20px;
+            color: $white;
+            font-weight: 700;
+            transition: ease-out 300ms;
+
+            &:hover {
+                background: #ED8E01;
+            }
+
+            &:focus {
+                outline: 2.5px solid $white;
+            }
+        }
+    }
+
+    .all-article {
+        padding-top: 80px;
+
+        .title {
+            @extend .title-section;
         }
     }
 

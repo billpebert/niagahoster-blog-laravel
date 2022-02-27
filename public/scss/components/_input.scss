@@ -20,6 +20,9 @@ input::-ms-input-placeholder {
     background-repeat: no-repeat;
     outline: 2px solid $input-outline;
     outline-offset: -2px;
+    padding: 12px 32px;
+    font-size: 16px;
+    color: $black;
 
     &:focus {
         outline: 2px solid $hoster-blue;
@@ -27,11 +30,11 @@ input::-ms-input-placeholder {
     }
 }
 
+.bg-search {
+    background-position: calc(100% - 32px) center;
+}
+
 .input-search {
     @extend .input;
-    @extend .input-search;
-    padding: 12px 32px;
-    font-size: 16px;
-    color: $black;
-    background-position: calc(100% - 32px) center;
+    @extend .bg-search;
 }

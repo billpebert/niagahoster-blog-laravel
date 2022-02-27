@@ -1,0 +1,77 @@
+footer {
+    background: $darkest-blue;
+    padding: 96px 165px 42px !important;
+
+    @media only screen and (min-width:1000px) and (max-width: 1325px) {
+        padding: 96px 100px 42px !important;
+    }
+
+    .gx-custom {
+        column-gap: 99px;
+
+        @media only screen and (min-width:1201px) and (max-width: 1325px) {
+            column-gap: 80px;
+        }
+
+        @media only screen and (min-width:1000px) and (max-width: 1200px) {
+            column-gap: 40px;
+        }
+    }
+
+    .chapter {
+        margin-bottom: 32px;
+        row-gap: 8px;
+        display: flex;
+        flex-direction: column;
+
+        .sub-link {
+            color: $white !important;
+            font-weight: 700;
+            font-size: 16px;
+            margin-bottom: 8px;
+        }
+
+        .footer-link {
+            color: $gray !important;
+            width: max-content;
+            font-size: 14px;
+        }
+    }
+
+    .niaga-info {
+        row-gap: 32px;
+
+        p {
+            color: $white;
+            font-weight: 400;
+            font-size: 14px;
+            line-height: 24px;
+            letter-spacing: 2%;
+            margin-bottom: 0;
+            overflow-wrap: break-word;
+        }
+
+        .social-media-icon {
+            gap: 18px;
+        }
+
+    }
+
+    .newsletter {
+        label {
+            font-size: 16px;
+            font-weight: 700;
+            color: $white;
+            margin-bottom: 16px;
+        }
+
+        .d-flex {
+            column-gap: 12px;
+        }
+
+        .btn-hoster-yellow {
+            font-size: 16px;
+            outline: none;
+        }
+    }
+}

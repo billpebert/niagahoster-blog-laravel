@@ -4,9 +4,24 @@
 @import 'components/navbar';
 @import 'components/footer';
 @import 'components/input';
+@import 'components/buttons';
 
 a {
+    color: $white;
     text-decoration: none;
+    transition: all .3s;
+
+    &:hover {
+        color: $white;
+    }
+}
+
+.landing-ornament {
+    position: absolute;
+    z-index: 0;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
 }
 
 .hero {
@@ -17,14 +32,6 @@ a {
 
     @media (max-width: 500px) {
         padding: 24px 12px 78px;
-    }
-
-    .ornament {
-        position: absolute;
-        z-index: 0;
-        top: 0;
-        left: 50%;
-        transform: translateX(-50%);
     }
 
     .banner-link {
@@ -68,6 +75,33 @@ a {
         }
     }
 
+}
+
+.get-started {
+    background: $header-background;
+    padding: 92px 0;
+    position: relative;
+    overflow: hidden;
+    text-align: center;
+
+    .headline {
+        position: relative;
+        font-weight: 700;
+        font-size: 40px;
+        line-height: 56px;
+        color: $white;
+    }
+
+    .caption {
+        position: relative;
+        font-size: 16px;
+        letter-spacing: 0.5%;
+        text-align: center;
+        line-height: 24px;
+        margin: 28px auto 42px;
+        max-width: 635px;
+        color: #B8DAFE
+    }
 }
 
 @import 'components/section-article';

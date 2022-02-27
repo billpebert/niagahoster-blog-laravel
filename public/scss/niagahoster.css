@@ -47,6 +47,80 @@ nav .navbar-collapse .btn-login {
   text-transform: capitalize;
 }
 
+footer {
+  background: #22273C;
+  padding: 96px 165px 42px !important;
+}
+@media only screen and (min-width: 1000px) and (max-width: 1325px) {
+  footer {
+    padding: 96px 100px 42px !important;
+  }
+}
+footer .gx-custom {
+  -moz-column-gap: 99px;
+       column-gap: 99px;
+}
+@media only screen and (min-width: 1201px) and (max-width: 1325px) {
+  footer .gx-custom {
+    -moz-column-gap: 80px;
+         column-gap: 80px;
+  }
+}
+@media only screen and (min-width: 1000px) and (max-width: 1200px) {
+  footer .gx-custom {
+    -moz-column-gap: 40px;
+         column-gap: 40px;
+  }
+}
+footer .chapter {
+  margin-bottom: 32px;
+  row-gap: 8px;
+  display: flex;
+  flex-direction: column;
+}
+footer .chapter .sub-link {
+  color: #fff !important;
+  font-weight: 700;
+  font-size: 16px;
+  margin-bottom: 8px;
+}
+footer .chapter .footer-link {
+  color: #A9AFB8 !important;
+  width: -webkit-max-content;
+  width: -moz-max-content;
+  width: max-content;
+  font-size: 14px;
+}
+footer .niaga-info {
+  row-gap: 32px;
+}
+footer .niaga-info p {
+  color: #fff;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 24px;
+  letter-spacing: 2%;
+  margin-bottom: 0;
+  overflow-wrap: break-word;
+}
+footer .niaga-info .social-media-icon {
+  gap: 18px;
+}
+footer .newsletter label {
+  font-size: 16px;
+  font-weight: 700;
+  color: #fff;
+  margin-bottom: 16px;
+}
+footer .newsletter .d-flex {
+  -moz-column-gap: 12px;
+       column-gap: 12px;
+}
+footer .newsletter .btn-hoster-yellow {
+  font-size: 16px;
+  outline: none;
+}
+
 input::-moz-placeholder {
   color: #A9AFB8;
   opacity: 1;
@@ -81,21 +155,53 @@ input::-ms-input-placeholder {
   background-repeat: no-repeat;
   outline: 2px solid #D6DADE;
   outline-offset: -2px;
+  padding: 12px 32px;
+  font-size: 16px;
+  color: #29384E;
 }
 .input:focus, .input-search:focus {
   outline: 2px solid #007AFF;
   outline-offset: -2px;
 }
 
-.input-search {
-  padding: 12px 32px;
-  font-size: 16px;
-  color: #29384E;
+.bg-search, .input-search {
   background-position: calc(100% - 32px) center;
 }
 
+.btn-hoster-yellow {
+  padding: 12px 64px;
+  border: none;
+  border-radius: 100px;
+  background: #FF9800;
+  box-shadow: 0px 8px 10px rgba(255, 176, 77, 0.32);
+  text-align: center;
+  font-size: 20px;
+  color: #fff;
+  font-weight: 700;
+  transition: ease-out 300ms;
+}
+.btn-hoster-yellow:hover {
+  background: #ED8E01;
+}
+.btn-hoster-yellow:focus {
+  outline: 2.5px solid #fff;
+}
+
 a {
+  color: #fff;
   text-decoration: none;
+  transition: all 0.3s;
+}
+a:hover {
+  color: #fff;
+}
+
+.landing-ornament {
+  position: absolute;
+  z-index: 0;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
 }
 
 .hero {
@@ -108,13 +214,6 @@ a {
   .hero {
     padding: 24px 12px 78px;
   }
-}
-.hero .ornament {
-  position: absolute;
-  z-index: 0;
-  top: 0;
-  left: 50%;
-  transform: translateX(-50%);
 }
 .hero .banner-link {
   position: relative;
@@ -151,6 +250,31 @@ a {
   line-height: 24px;
   margin: 32px 0px 60px;
   text-align: center;
+}
+
+.get-started {
+  background: linear-gradient(249.77deg, #0094FF -1.99%, #007AFF 43.52%, #026CE8 95.86%), #F0F7FF;
+  padding: 92px 0;
+  position: relative;
+  overflow: hidden;
+  text-align: center;
+}
+.get-started .headline {
+  position: relative;
+  font-weight: 700;
+  font-size: 40px;
+  line-height: 56px;
+  color: #fff;
+}
+.get-started .caption {
+  position: relative;
+  font-size: 16px;
+  letter-spacing: 0.5%;
+  text-align: center;
+  line-height: 24px;
+  margin: 28px auto 42px;
+  max-width: 635px;
+  color: #B8DAFE;
 }
 
 .title-section, .articles-preview .all-article-title, .articles-preview .article-section .head-section span {
@@ -262,23 +386,6 @@ a {
 .articles-preview .subscribe .caption {
   font-size: 16px;
   color: #E0EFFF;
-}
-.articles-preview .subscribe .btn-subs {
-  padding: 12px 64px;
-  border-radius: 100px;
-  background: #FF9800;
-  box-shadow: 0px 8px 10px rgba(255, 176, 77, 0.32);
-  text-align: center;
-  font-size: 20px;
-  color: #fff;
-  font-weight: 700;
-  transition: ease-out 300ms;
-}
-.articles-preview .subscribe .btn-subs:hover {
-  background: #ED8E01;
-}
-.articles-preview .subscribe .btn-subs:focus {
-  outline: 2.5px solid #fff;
 }
 .articles-preview .all-article-title {
   padding-top: 80px;

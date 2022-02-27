@@ -3,7 +3,7 @@
 @section('content')
 <div class="hero text-light">
     <x-organisms.navbar/>
-    <img src="{{ asset('assets/images/circular_ornament.svg') }}" class="ornament" alt="" />
+    <img src="{{ asset('assets/images/circular_ornament01.svg') }}" class="landing-ornament" alt="" />
 
     <div class="banner-link container-fluid">
         <x-atoms.link href="#!" class="d-flex align-items-center gap-2 items">
@@ -38,7 +38,7 @@
     </header>
 </div>
 
-
+{{-- Section Blog / Articles --}}
 <div class="container">
     <div class="row articles-preview">
         <div class="col-md-9 col-12">
@@ -74,7 +74,7 @@
                         Kami akan mengirimkan pemberitahuan artikel <br class="d-none d-md-block"> terbaru kami melalui email Anda. Ingin <br class="d-none d-md-block"> mendapatkan pemberitahuan?
                     </div>
                 </div>
-                <x-atoms.link href="#" class="btn-subs">
+                <x-atoms.link href="#!" class="btn-hoster-yellow">
                     Langganan Sekarang
                 </x-atoms.link>
             </div>
@@ -179,7 +179,22 @@
             </div>
         </div>
     </div>
-
-
 </div>
+
+<div class="get-started">
+    <img src="{{ asset('assets/images/circular_ornament02.svg') }}" class="landing-ornament" alt="">
+
+    <div class="container-fluid">
+        <div class="headline">
+            Awali Kesuksesan Anda Bersama Niagahoster
+        </div>
+        <div class="caption">
+            Kini tidak lagi sulit mewujudkan website impian. Performa hebat, keamanan ekstra, dan layanan dukungan teknis yang bisa diandalkan - semua dengan harga terjangkau!
+        </div>
+        <x-atoms.link href="#!" class="btn-hoster-yellow">
+            Mulai Sekarang
+        </x-atoms.link>
+    </div> 
+</div>
+
 @endsection

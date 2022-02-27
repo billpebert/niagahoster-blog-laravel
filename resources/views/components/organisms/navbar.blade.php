@@ -1,4 +1,4 @@
-<nav class="navbar navbar-expand-lg navbar-light bg-transparent d-flex flex-lg-row flex-column flex-wrap">
+<nav class="navbar navbar-expand-lg navbar-light bg-transparent">
   <div class="container-fluid">
     <a class="navbar-brand" href="{{ route('home') }}">
         <img src="{{ asset('assets/images/logo-navbar.svg') }}" alt="">

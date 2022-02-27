@@ -153,7 +153,7 @@ a {
   text-align: center;
 }
 
-.title-section, .articles-preview .all-article .title, .articles-preview .article-section .head-section span {
+.title-section, .articles-preview .all-article-title, .articles-preview .article-section .head-section span {
   font-weight: 700;
   font-size: 32px;
   line-height: 42px;
@@ -162,6 +162,50 @@ a {
 
 .articles-preview {
   padding: 80px 0;
+}
+.articles-preview .author {
+  -moz-column-gap: 12px;
+       column-gap: 12px;
+}
+.articles-preview .author img {
+  width: 24px !important;
+}
+.articles-preview .author span {
+  font-size: 12px;
+  color: #29384E;
+}
+.articles-preview .article-content .content .title {
+  font-size: 16px;
+  color: #29384E;
+  font-weight: 700;
+}
+.articles-preview .article-content .content p.paragraph {
+  font-weight: 400;
+  font-size: 12px !important;
+  line-height: 16px;
+  margin-bottom: 0;
+  color: #546071;
+  max-width: 550px;
+  letter-spacing: 2%;
+}
+.articles-preview .article-detail {
+  -moz-column-gap: 12px;
+       column-gap: 12px;
+  color: #29384E;
+  font-size: 12px;
+}
+.articles-preview .article-detail .date,
+.articles-preview .article-detail .duration {
+  width: -webkit-max-content;
+  width: -moz-max-content;
+  width: max-content;
+}
+.articles-preview .article-detail .niaga-badge {
+  letter-spacing: 0.5%;
+  color: #007AFF;
+  padding: 8px 16px;
+  border-radius: 99px;
+  background: #E0EFFF;
 }
 .articles-preview .article-section {
   padding: 0 0 80px;
@@ -176,50 +220,6 @@ a {
      -moz-user-select: none;
       -ms-user-select: none;
           user-select: none;
-}
-.articles-preview .article-section .articles .article-item .left-side .author {
-  -moz-column-gap: 12px;
-       column-gap: 12px;
-}
-.articles-preview .article-section .articles .article-item .left-side .author img {
-  width: 24px !important;
-}
-.articles-preview .article-section .articles .article-item .left-side .author span {
-  font-size: 12px;
-  color: #29384E;
-}
-.articles-preview .article-section .articles .article-item .left-side .content .title {
-  font-size: 16px;
-  color: #29384E;
-  font-weight: 700;
-}
-.articles-preview .article-section .articles .article-item .left-side .content p.paragraph {
-  font-weight: 400;
-  font-size: 12px;
-  line-height: 16px;
-  margin-bottom: 0;
-  color: #546071;
-  max-width: 550px;
-  letter-spacing: 2%;
-}
-.articles-preview .article-section .articles .article-item .left-side .article-detail {
-  -moz-column-gap: 12px;
-       column-gap: 12px;
-  color: #29384E;
-  font-size: 12px;
-}
-.articles-preview .article-section .articles .article-item .left-side .article-detail .date,
-.articles-preview .article-section .articles .article-item .left-side .article-detail .duration {
-  width: -webkit-max-content;
-  width: -moz-max-content;
-  width: max-content;
-}
-.articles-preview .article-section .articles .article-item .left-side .article-detail .niaga-badge {
-  letter-spacing: 0.5%;
-  color: #007AFF;
-  padding: 8px 16px;
-  border-radius: 99px;
-  background: #E0EFFF;
 }
 .articles-preview .article-section .articles .article-item .thumbnail img {
   width: 255px;
@@ -280,8 +280,31 @@ a {
 .articles-preview .subscribe .btn-subs:focus {
   outline: 2.5px solid #fff;
 }
-.articles-preview .all-article {
+.articles-preview .all-article-title {
   padding-top: 80px;
+  margin-bottom: 36px;
+}
+.articles-preview .cards-all-article {
+  row-gap: 56px;
+}
+.articles-preview .cards-all-article .flex-column {
+  row-gap: 12px;
+}
+.articles-preview .cards-all-article .thumbnail-cards {
+  max-width: 255px;
+  -o-object-fit: cover;
+     object-fit: cover;
+  height: 136px;
+  border-radius: 5px;
+}
+.articles-preview .cards-all-article .article-content {
+  max-width: 255px;
+}
+.articles-preview .cards-all-article .article-content p.paragraph {
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
 }
 .articles-preview .blog-category {
   padding: 16px;

@@ -1,19 +1,22 @@
 <?php
 
-namespace App\View\Components\Organisms;
+namespace App\View\Components\Atoms;
 
 use Illuminate\View\Component;
 
-class ArticleSection extends Component
+class AuthorProfile extends Component
 {
     /**
      * Create a new component instance.
      *
      * @return void
      */
-    public function __construct()
+
+    public $name, $avatar;
+    public function __construct($name, $avatar)
     {
-        //
+        $this->name = $name;
+        $this->avatar = $avatar;
     }
 
     /**
@@ -23,6 +26,6 @@ class ArticleSection extends Component
      */
     public function render()
     {
-        return view('components.organisms.article-section');
+        return view('components.atoms.author-profile');
     }
 }

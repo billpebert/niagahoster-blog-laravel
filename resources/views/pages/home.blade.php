@@ -6,21 +6,21 @@
     <img src="{{ asset('assets/images/circular_ornament.svg') }}" class="ornament" alt="" />
 
     <div class="banner-link container-fluid">
-        <a href="#" class="d-flex align-items-center gap-2 items">
+        <x-atoms.link href="#!" class="d-flex align-items-center gap-2 items">
             Tutorial <img src="{{ asset('assets/icons/ic-arrow_down.svg') }}" alt="">
-        </a>
-        <a href="#" class="d-flex align-items-center gap-2 items">
+        </x-atoms.link>
+        <x-atoms.link href="#!" class="d-flex align-items-center gap-2 items">
             Digital Marketing <img src="{{ asset('assets/icons/ic-arrow_down.svg') }}" alt="">
-        </a>
-        <a href="#" class="d-flex align-items-center gap-2 items">
+        </x-atoms.link>
+        <x-atoms.link href="#!" class="d-flex align-items-center gap-2 items">
             Web Development & Design <img src="{{ asset('assets/icons/ic-arrow_down.svg') }}" alt="">
-        </a>
-        <a href="#" class="d-flex align-items-center gap-2 items">
+        </x-atoms.link>
+        <x-atoms.link href="#!" class="d-flex align-items-center gap-2 items">
             Insight Bisnis <img src="{{ asset('assets/icons/ic-arrow_down.svg') }}" alt="">
-        </a>
-        <a href="#" class="d-flex align-items-center gap-2 items">
+        </x-atoms.link>
+        <x-atoms.link href="#!" class="d-flex align-items-center gap-2 items">
             News & Updates <img src="{{ asset('assets/icons/ic-arrow_down.svg') }}" alt="">
-        </a>
+        </x-atoms.link>
     </div>
 
     <header>
@@ -44,19 +44,18 @@
         <div class="col-md-9 col-12">
             <div class="article-section">
                 <x-molecules.article--head title="Artikel Terbaru" src="{{ asset('assets/icons/ic-electric.svg') }}"/>
-                <div class="articles d-flex flex-column gap-5">
-                    <x-organisms.article-section/>
-                </div>
+                <x-organisms.articles/>
                 <div class="d-flex justify-content-center">
-                    <x-atoms.link href="#" class="toggle-allticle">
+                    <x-atoms.link href="#!" class="toggle-allticle">
                         Lihat Semua Artikel
                     </x-atoms.link>
                 </div>
             </div>
+
             <div class="article-section">
                 <x-molecules.article--head title="Artikel Populer" src="{{ asset('assets/icons/ic-fire.svg') }}"/>
                 <div class="articles d-flex flex-column gap-5">
-                    <x-organisms.article-section/>
+                    <x-organisms.articles/>
                 </div>
                 <div class="d-flex justify-content-center">
                     <x-atoms.link href="#" class="toggle-allticle">
@@ -80,11 +79,17 @@
                 </x-atoms.link>
             </div>
 
-            <div class="all-article">
-                <div class="title">
-                    Semua Artikel
-                </div>
+            <div class="all-article-title">
+                Semua Artikel
             </div>
+            <div class="row cards-all-article">
+                @for ($b = 1; $b < 13; $b++)
+                <div class="col-lg-4 col-12 col-md-6">
+                    <x-organisms.vertical-article thumbnail="{{ asset('assets/images/illustration.png') }}" author="Nida Regita F" avatar="{{ asset('assets/images/user-1.png') }}" title="4+ Cara Mudah Cek IP Hosting Website" paragraph="Anda ingin tahu cara cek IP hosting? Selamat, Anda berada di halaman yang tepat! IP hosting adalah barisan angka sebagai identitas unik dari suatu hosting ..." category="Hosting" date="" time="5" />
+                </div>
+                @endfor
+            </div>
+
         </div>
 
         <div class="col-md-3 col-12">

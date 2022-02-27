@@ -1,10 +1,10 @@
 <?php
 
-namespace App\View\Components\Molecules;
+namespace App\View\Components\Organisms;
 
 use Illuminate\View\Component;
 
-class HorizontalArticle extends Component
+class VerticalArticle extends Component
 {
     /**
      * Create a new component instance.
@@ -12,9 +12,11 @@ class HorizontalArticle extends Component
      * @return void
      */
 
-    public $author, $avatar, $title, $paragraph, $category, $date, $time, $thumbnail, $href;
-    public function __construct($author, $avatar, $title, $paragraph, $category, $date, $time, $thumbnail, $href)
+    public $thumbnail, $author, $avatar, $title, $paragraph, $category, $date, $time;
+
+    public function __construct($thumbnail, $author, $avatar, $title, $paragraph, $category, $date, $time)
     {
+        $this->thumbnail = $thumbnail;
         $this->author = $author;
         $this->avatar = $avatar;
         $this->title = $title;
@@ -22,8 +24,6 @@ class HorizontalArticle extends Component
         $this->category = $category;
         $this->date = $date;
         $this->time = $time;
-        $this->thumbnail = $thumbnail;
-        $this->href = $href;
     }
 
     /**
@@ -33,6 +33,6 @@ class HorizontalArticle extends Component
      */
     public function render()
     {
-        return view('components.molecules.horizontal-article');
+        return view('components.organisms.vertical-article');
     }
 }

@@ -185,6 +185,40 @@
 
     }
 
+    .page-pagination {
+        column-gap: 18px;
+        margin-top: 56px;
+
+        .item-links {
+            padding: 15px 22px;
+            text-align: center;
+            font-size: 16px;
+            font-weight: 600;
+            border-radius: 8px;
+            color: $black;
+            outline: 1px solid $pagination-outline;
+            background: transparent;
+
+            &.active {
+                color: $white;
+                outline: none;
+                background: $hoster-blue;
+            }
+
+            &.disabled {
+                color: $pagination-outline;
+            }
+        }
+
+        .item-dots {
+            font-size: 5px;
+            padding: 15px 0;
+            color: initial;
+        }
+
+
+    }
+
     .blog-category {
         padding: 16px;
         margin-top: 36px;

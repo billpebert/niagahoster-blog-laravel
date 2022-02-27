@@ -306,6 +306,34 @@ a {
   -webkit-box-orient: vertical;
   overflow: hidden;
 }
+.articles-preview .page-pagination {
+  -moz-column-gap: 18px;
+       column-gap: 18px;
+  margin-top: 56px;
+}
+.articles-preview .page-pagination .item-links {
+  padding: 15px 22px;
+  text-align: center;
+  font-size: 16px;
+  font-weight: 600;
+  border-radius: 8px;
+  color: #29384E;
+  outline: 1px solid #D9DDE3;
+  background: transparent;
+}
+.articles-preview .page-pagination .item-links.active {
+  color: #fff;
+  outline: none;
+  background: #007AFF;
+}
+.articles-preview .page-pagination .item-links.disabled {
+  color: #D9DDE3;
+}
+.articles-preview .page-pagination .item-dots {
+  font-size: 5px;
+  padding: 15px 0;
+  color: initial;
+}
 .articles-preview .blog-category {
   padding: 16px;
   margin-top: 36px;

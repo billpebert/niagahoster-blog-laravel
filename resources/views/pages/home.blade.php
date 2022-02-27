@@ -79,16 +79,41 @@
                 </x-atoms.link>
             </div>
 
-            <div class="all-article-title">
-                Semua Artikel
-            </div>
-            <div class="row cards-all-article">
-                @for ($b = 1; $b < 13; $b++)
-                <div class="col-lg-4 col-12 col-md-6">
-                    <x-organisms.vertical-article thumbnail="{{ asset('assets/images/illustration.png') }}" author="Nida Regita F" avatar="{{ asset('assets/images/user-1.png') }}" title="4+ Cara Mudah Cek IP Hosting Website" paragraph="Anda ingin tahu cara cek IP hosting? Selamat, Anda berada di halaman yang tepat! IP hosting adalah barisan angka sebagai identitas unik dari suatu hosting ..." category="Hosting" date="" time="5" />
+            <section class="all-articles">
+                <div class="all-article-title">
+                    Semua Artikel
                 </div>
-                @endfor
-            </div>
+                <div class="row cards-all-article">
+                    @for ($b = 1; $b < 13; $b++)
+                    <div class="col-lg-4 col-12 col-md-6">
+                        <x-organisms.vertical-article thumbnail="{{ asset('assets/images/illustration.png') }}" author="Nida Regita F" avatar="{{ asset('assets/images/user-1.png') }}" title="4+ Cara Mudah Cek IP Hosting Website" paragraph="Anda ingin tahu cara cek IP hosting? Selamat, Anda berada di halaman yang tepat! IP hosting adalah barisan angka sebagai identitas unik dari suatu hosting ..." category="Hosting" date="" time="5" />
+                    </div>
+                    @endfor
+                </div>
+                <div class="page-pagination d-flex justify-content-center">
+                    <div class="item-links disabled">
+                        <img src="{{ asset('assets/icons/ic-arrow_left_disabled.svg') }}" alt="">
+                    </div>
+                    <x-atoms.link href="#!" class="item-links active">
+                        1
+                    </x-atoms.link>
+                    <x-atoms.link href="#!" class="item-links">
+                        2
+                    </x-atoms.link>
+                    <x-atoms.link href="#!" class="item-links">
+                        3
+                    </x-atoms.link>
+                    <div href="#!" class="item-dots">
+                        <span>&#8226;&#8226;&#8226;</span>
+                    </div>
+                    <x-atoms.link href="#!" class="item-links">
+                        13
+                    </x-atoms.link>
+                    <div class="item-links disabled">
+                        <img src="{{ asset('assets/icons/ic-arrow_right.svg') }}" alt="">
+                    </div>
+                </div>
+            </section>
 
         </div>
 
@@ -154,5 +179,7 @@
             </div>
         </div>
     </div>
+
+
 </div>
 @endsection

@@ -106,6 +106,9 @@ footer .niaga-info p {
 footer .niaga-info .social-media-icon {
   gap: 18px;
 }
+footer .newsletter {
+  margin-top: 30px;
+}
 footer .newsletter label {
   font-size: 16px;
   font-weight: 700;
@@ -116,9 +119,13 @@ footer .newsletter .d-flex {
   -moz-column-gap: 12px;
        column-gap: 12px;
 }
+footer .newsletter .input, footer .newsletter .input-search {
+  max-width: 537px;
+}
 footer .newsletter .btn-hoster-yellow {
   font-size: 16px;
   outline: none;
+  padding: 12px 40px !important;
 }
 
 input::-moz-placeholder {

@@ -58,6 +58,8 @@ footer {
     }
 
     .newsletter {
+        margin-top: 30px;
+
         label {
             font-size: 16px;
             font-weight: 700;
@@ -69,9 +71,14 @@ footer {
             column-gap: 12px;
         }
 
+        .input {
+            max-width: 537px;
+        }
+
         .btn-hoster-yellow {
             font-size: 16px;
             outline: none;
+            padding: 12px 40px !important;
         }
     }
 }

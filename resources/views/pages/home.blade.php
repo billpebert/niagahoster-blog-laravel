@@ -12,8 +12,10 @@
 
 {{-- Section Blog / Articles --}}
 <div class="container">
-    <div class="row articles-preview">
+
+    <div class="row articles-preview" id="__articles">
         <div class="col-md-9 col-12">
+            @if (Request::get('page') < 2)
             <div class="article-section">
                 <x-molecules.article--head title="Artikel Terbaru" src="{{ asset('assets/icons/ic-electric.svg') }}"/>
                 <x-organisms.articles/>
@@ -37,9 +39,10 @@
             </div>
 
             <x-molecules.banner-subs/>
+            @endif
 
             <section class="all-articles">
-                <div class="all-article-title">
+                <div class="all-article-title {{ Request::get('page') < 2 ? '' : 'pt-0' }}">
                     Semua Artikel
                 </div>
                 <div class="row cards-all-article">
@@ -54,14 +57,16 @@
 
         </div>
 
-        <div class="col-md-3 col-12 ">
-            <x-atoms.input type="name" class="input-search w-100" name="search" placeholder="Cari artikel blog . . ." style="background-image: url('{{ URL::to('/') }}/assets/icons/ic-search.svg');"  />
+        <div class="col-md-3 col-12">
+            <div id="category">
+                <x-atoms.input type="name" class="input-search w-100" name="search" placeholder="Cari artikel blog . . ." style="background-image: url('{{ URL::to('/') }}/assets/icons/ic-search.svg');"  />
 
-            <div class="blog-category">
-                <div class="title">
-                    Kategori Blog
+                <div class="blog-category">
+                    <div class="title">
+                        Kategori Blog
+                    </div>
+                    <x-molecules.accordion/>
                 </div>
-                <x-molecules.accordion/>
             </div>
         </div>
     </div>
@@ -70,3 +75,23 @@
 <x-molecules.get-started/>
 
 @endsection
+
+@push('scripts')
+<script>
+var articles = $("#__articles");
+var category = $("#category");
+
+console.log(articles.height())
+  $(function () {
+    $(document).scroll(function () {
+      if($(this).scrollTop() > articles.height() + 400){
+          category.addClass("position-relative").removeClass("category-bar");
+      }else if($(this).scrollTop() > category.height() + 200){
+          category.addClass("category-bar").removeClass("position-relative");
+      }else{
+          category.addClass("position-relative").removeClass("category-bar");
+      }
+    });
+  });
+</script>
+@endpush

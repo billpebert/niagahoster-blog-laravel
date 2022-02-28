@@ -1,4 +1,4 @@
-<nav class="navbar navbar-expand-lg navbar-light bg-transparent">
+<nav class="navbar fixed-top navbar-expand-lg navbar-dark" id="niaga-nav">
   <div class="container-fluid">
     <a class="navbar-brand" href="{{ route('home') }}">
         <img src="{{ asset('assets/images/logo-navbar.svg') }}" alt="">
@@ -44,3 +44,14 @@
     </div>
   </div>
 </nav>
+
+@push('scripts')
+<script>
+  $(function () {
+    $(document).scroll(function () {
+      var nav = $("#niaga-nav");
+      nav.toggleClass("on-scroll-background", $(this).scrollTop() > nav.height());
+    });
+  });
+</script>
+@endpush

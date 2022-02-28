@@ -1,10 +1,16 @@
+.navbar.on-scroll-background {
+    background: $hoster-blue !important;
+    transition: background-color 200ms linear;
+}
+
 nav {
     position: relative;
     z-index: 1;
-    padding: 0 40px;
+    padding: 19px 40px !important;
 
     @media (max-width: 500px) {
         padding: 0 12px;
+        background-color: $hoster-blue;
     }
 
     .navbar-toggler {

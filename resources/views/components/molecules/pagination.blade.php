@@ -5,7 +5,7 @@
     <x-atoms.link href="#!" class="item-links active">
         1
     </x-atoms.link>
-    <x-atoms.link href="#!" class="item-links">
+    <x-atoms.link href="{{ route('home') }}?page=2" class="item-links">
         2
     </x-atoms.link>
     <x-atoms.link href="#!" class="item-links">

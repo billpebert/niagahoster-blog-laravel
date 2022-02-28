@@ -1,4 +1,4 @@
-<footer>
+<footer class="position-relative">
     <div class="container">
         <div class="row gx-2">
             <div class="col-lg-6 col-12">

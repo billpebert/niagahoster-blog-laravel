@@ -1,5 +1,6 @@
 @import 'utilities/fonts';
 @import 'utilities/colors';
+@import 'utilities/text-animation';
 
 @import 'components/navbar';
 @import 'components/footer';
@@ -27,12 +28,12 @@ a {
 
 .hero {
     background: $card-background;
-    padding: 24px 0 78px;
+    padding: 80px 0;
     position: relative;
     overflow: hidden;
 
     @media (max-width: 500px) {
-        padding: 24px 12px 78px;
+        padding: 70px 12px;
     }
 
     .banner-link {
@@ -57,7 +58,6 @@ a {
     header {
         padding-top: 64px;
         color: $white;
-        max-width: 540px;
         margin: 0 auto;
         position: relative;
 
@@ -66,6 +66,25 @@ a {
             font-size: 56px;
             text-align: center;
             line-height: 64px;
+
+            #flip {
+                height: 64px;
+                overflow: hidden;
+
+                >div>span {
+                    height: 45px;
+                    margin-bottom: 45px;
+                    display: inline-block;
+                }
+
+                div:first-child {
+                    animation-name: show;
+                    animation-duration: 7s;
+                    animation-timing-function: linear;
+                    animation-direction: alternate;
+                    animation-iteration-count: infinite;
+                }
+            }
         }
 
         .hero-caption {
@@ -73,6 +92,14 @@ a {
             line-height: 24px;
             margin: 32px 0px 60px;
             text-align: center
+        }
+
+        .input-search {
+            width: 540px;
+
+            @media (max-width: 500px) {
+                width: 95%;
+            }
         }
     }
 

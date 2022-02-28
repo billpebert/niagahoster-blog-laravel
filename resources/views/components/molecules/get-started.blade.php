@@ -8,8 +8,8 @@
         <div class="caption">
             Kini tidak lagi sulit mewujudkan website impian. Performa hebat, keamanan ekstra, dan layanan dukungan teknis yang bisa diandalkan - semua dengan harga terjangkau!
         </div>
-        <a href="#!" class="btn-hoster-yellow">
+        <x-atoms.link href="https://niagahoster.co.id" target="_blank" class="btn-hoster-yellow">
             Mulai Sekarang
-        </a>
+        </x-atoms.link>
     </div> 
 </div>

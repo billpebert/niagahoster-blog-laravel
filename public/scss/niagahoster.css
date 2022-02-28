@@ -3,14 +3,79 @@
   font-family: "Nunito Sans", sans-serif;
 }
 
+@-webkit-keyframes show {
+  0% {
+    margin-top: -270px;
+  }
+  12.5% {
+    margin-top: -270px;
+  }
+  25% {
+    margin-top: -180px;
+  }
+  37.5% {
+    margin-top: -180px;
+  }
+  50% {
+    margin-top: -90px;
+  }
+  62.5% {
+    margin-top: -90px;
+  }
+  75% {
+    margin-top: 0px;
+  }
+  87.5% {
+    margin-top: 0px;
+  }
+  100% {
+    margin-top: 0px;
+  }
+}
+
+@keyframes show {
+  0% {
+    margin-top: -270px;
+  }
+  12.5% {
+    margin-top: -270px;
+  }
+  25% {
+    margin-top: -180px;
+  }
+  37.5% {
+    margin-top: -180px;
+  }
+  50% {
+    margin-top: -90px;
+  }
+  62.5% {
+    margin-top: -90px;
+  }
+  75% {
+    margin-top: 0px;
+  }
+  87.5% {
+    margin-top: 0px;
+  }
+  100% {
+    margin-top: 0px;
+  }
+}
+.navbar.on-scroll-background {
+  background: #007AFF !important;
+  transition: background-color 200ms linear;
+}
+
 nav {
   position: relative;
   z-index: 1;
-  padding: 0 40px;
+  padding: 19px 40px !important;
 }
 @media (max-width: 500px) {
   nav {
     padding: 0 12px;
+    background-color: #007AFF;
   }
 }
 nav .navbar-toggler {
@@ -246,13 +311,13 @@ a:hover {
 
 .hero {
   background: linear-gradient(249.77deg, #0094FF -1.99%, #007DFF 43.52%, #026CE8 95.86%);
-  padding: 24px 0 78px;
+  padding: 80px 0;
   position: relative;
   overflow: hidden;
 }
 @media (max-width: 500px) {
   .hero {
-    padding: 24px 12px 78px;
+    padding: 70px 12px;
   }
 }
 .hero .banner-link {
@@ -275,7 +340,6 @@ a:hover {
 .hero header {
   padding-top: 64px;
   color: #fff;
-  max-width: 540px;
   margin: 0 auto;
   position: relative;
 }
@@ -285,11 +349,40 @@ a:hover {
   text-align: center;
   line-height: 64px;
 }
+.hero header .headline #flip {
+  height: 64px;
+  overflow: hidden;
+}
+.hero header .headline #flip > div > span {
+  height: 45px;
+  margin-bottom: 45px;
+  display: inline-block;
+}
+.hero header .headline #flip div:first-child {
+  -webkit-animation-name: show;
+          animation-name: show;
+  -webkit-animation-duration: 7s;
+          animation-duration: 7s;
+  -webkit-animation-timing-function: linear;
+          animation-timing-function: linear;
+  -webkit-animation-direction: alternate;
+          animation-direction: alternate;
+  -webkit-animation-iteration-count: infinite;
+          animation-iteration-count: infinite;
+}
 .hero header .hero-caption {
   font-size: 16px;
   line-height: 24px;
   margin: 32px 0px 60px;
   text-align: center;
+}
+.hero header .input-search {
+  width: 540px;
+}
+@media (max-width: 500px) {
+  .hero header .input-search {
+    width: 95%;
+  }
 }
 
 .get-started {
@@ -327,6 +420,7 @@ a:hover {
 
 .articles-preview {
   padding: 80px 0;
+  position: relative;
 }
 .articles-preview .author {
   -moz-column-gap: 12px;
@@ -482,6 +576,15 @@ a:hover {
   font-size: 5px;
   padding: 15px 0;
   color: initial;
+}
+.articles-preview .category-bar {
+  position: fixed;
+  top: 120px;
+  width: 310px;
+}
+.articles-preview .fixed-bottom {
+  position: absolute;
+  bottom: 50px;
 }
 .articles-preview .blog-category {
   padding: 16px;

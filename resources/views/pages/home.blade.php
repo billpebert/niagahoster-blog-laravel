@@ -5,37 +5,9 @@
     <x-organisms.navbar/>
     <img src="{{ asset('assets/images/circular_ornament01.svg') }}" class="landing-ornament" alt="" />
 
-    <div class="banner-link container-fluid">
-        <x-atoms.link href="#!" class="d-flex align-items-center gap-2 items">
-            Tutorial <img src="{{ asset('assets/icons/ic-arrow_down.svg') }}" alt="">
-        </x-atoms.link>
-        <x-atoms.link href="#!" class="d-flex align-items-center gap-2 items">
-            Digital Marketing <img src="{{ asset('assets/icons/ic-arrow_down.svg') }}" alt="">
-        </x-atoms.link>
-        <x-atoms.link href="#!" class="d-flex align-items-center gap-2 items">
-            Web Development & Design <img src="{{ asset('assets/icons/ic-arrow_down.svg') }}" alt="">
-        </x-atoms.link>
-        <x-atoms.link href="#!" class="d-flex align-items-center gap-2 items">
-            Insight Bisnis <img src="{{ asset('assets/icons/ic-arrow_down.svg') }}" alt="">
-        </x-atoms.link>
-        <x-atoms.link href="#!" class="d-flex align-items-center gap-2 items">
-            News & Updates <img src="{{ asset('assets/icons/ic-arrow_down.svg') }}" alt="">
-        </x-atoms.link>
-    </div>
+    <x-molecules.banner-link/>
 
-    <header>
-        <div class="d-flex flex-column justify-content-center mx-auto">
-            <div class="headline">
-                Dapatkan Artikel <br class="d-none d-md-block">
-                <span>Tutorial Hosting</span> <br class="d-none d-md-block">
-                Terbaik Disini
-            </div>
-            <div class="hero-caption">
-                Temukan artikel berisi solusi terbaik untuk segala permasalahan Anda
-            </div>
-            <x-atoms.input type="name" class="input-search" name="search" placeholder="Cari topic artikel yang ingin Anda cari . . ." style="background-image: url('{{ URL::to('/') }}/assets/icons/ic-search.svg');"  />
-        </div>
-    </header>
+    <x-molecules.header/>
 </div>
 
 {{-- Section Blog / Articles --}}
@@ -77,34 +49,12 @@
                     </div>
                     @endfor
                 </div>
-                <div class="page-pagination d-flex justify-content-center">
-                    <div class="item-links disabled">
-                        <img src="{{ asset('assets/icons/ic-arrow_left_disabled.svg') }}" alt="">
-                    </div>
-                    <x-atoms.link href="#!" class="item-links active">
-                        1
-                    </x-atoms.link>
-                    <x-atoms.link href="#!" class="item-links">
-                        2
-                    </x-atoms.link>
-                    <x-atoms.link href="#!" class="item-links">
-                        3
-                    </x-atoms.link>
-                    <div href="#!" class="item-dots">
-                        <span>&#8226;&#8226;&#8226;</span>
-                    </div>
-                    <x-atoms.link href="#!" class="item-links">
-                        13
-                    </x-atoms.link>
-                    <div class="item-links disabled">
-                        <img src="{{ asset('assets/icons/ic-arrow_right.svg') }}" alt="">
-                    </div>
-                </div>
+                <x-molecules.pagination/>
             </section>
 
         </div>
 
-        <div class="col-md-3 col-12">
+        <div class="col-md-3 col-12 ">
             <x-atoms.input type="name" class="input-search w-100" name="search" placeholder="Cari artikel blog . . ." style="background-image: url('{{ URL::to('/') }}/assets/icons/ic-search.svg');"  />
 
             <div class="blog-category">

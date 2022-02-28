@@ -1,14 +1,14 @@
-<div class="subscribe d-flex flex-wrap align-items-center justify-content-between">
-    <div>
+<div class="subscribe-banner d-flex align-items-center justify-content-between">
+    <div class="content flex-shrink-1">
         <div class="title">
-            Ingin jadi yang pertama tau <br class="d-none d-md-block">
+            Ingin jadi yang pertama tau
             artikel terbaru kami?
         </div>
         <div class="caption mt-3">
-            Kami akan mengirimkan pemberitahuan artikel <br class="d-none d-md-block"> terbaru kami melalui email Anda. Ingin <br class="d-none d-md-block"> mendapatkan pemberitahuan?
+            Kami akan mengirimkan pemberitahuan artikel terbaru kami melalui email Anda. Ingin mendapatkan pemberitahuan?
         </div>
     </div>
-    <x-atoms.link href="#!" class="btn-hoster-yellow">
+    <x-atoms.link href="#!" class="btn-hoster-yellow w-75">
         Langganan Sekarang
     </x-atoms.link>
 </div>

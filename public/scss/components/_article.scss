@@ -9,19 +9,6 @@
     padding: 80px 0;
     position: relative;
 
-    .author {
-        column-gap: 12px;
-
-        img {
-            width: 24px !important;
-        }
-
-        span {
-            font-size: 12px;
-            color: $black;
-        }
-    }
-
     .article-content {
         .content {
             .title {
@@ -39,26 +26,6 @@
                 max-width: 550px;
                 letter-spacing: 2%;
             }
-        }
-    }
-
-
-    .article-detail {
-        column-gap: 12px;
-        color: $black;
-        font-size: 12px;
-
-        .date,
-        .duration {
-            width: max-content;
-        }
-
-        .niaga-badge {
-            letter-spacing: 0.5%;
-            color: $hoster-blue;
-            padding: 8px 16px;
-            border-radius: 99px;
-            background: $light-blue;
         }
     }
 
@@ -114,30 +81,16 @@
         }
     }
 
-    .subscribe {
-        border-radius: 24px;
-        padding: 36px;
-        background: $card-background;
-        box-shadow: $blue-shadow;
-        gap: 46px;
-
-        .title {
-            font-weight: 700;
-            font-size: 24px;
-            line-height: 32px;
-            color: $white;
-        }
-
-        .caption {
-            font-size: 16px;
-            color: $light-blue;
-        }
-    }
-
     .all-article-title {
         padding-top: 80px;
         @extend .title-section;
         margin-bottom: 36px;
+    }
+
+    .subscribe-banner {
+        .content {
+            max-width: 438px !important;
+        }
     }
 
     .cards-all-article {
@@ -233,6 +186,205 @@
                     padding: 16px 0 !important;
                 }
             }
+        }
+    }
+}
+
+.subscribe-banner {
+    border-radius: 24px;
+    padding: 36px;
+    background: $card-background;
+    box-shadow: $blue-shadow;
+    gap: 46px;
+
+    .content {
+        .title {
+            font-weight: 700;
+            font-size: 24px;
+            line-height: 32px;
+            color: $white;
+        }
+
+        .caption {
+            font-size: 16px;
+            color: $light-blue;
+        }
+    }
+
+}
+
+.article-detail {
+    // column-gap: 12px;
+    color: $black;
+    font-size: 12px;
+
+    .date,
+    .duration {
+        width: max-content;
+    }
+
+    .niaga-badge {
+        letter-spacing: 0.5%;
+        color: $hoster-blue;
+        padding: 8px 16px;
+        border-radius: 99px;
+        background: $light-blue;
+    }
+}
+
+.article-read {
+    padding: 54px 0 0;
+
+    .sitemap {
+        max-width: 255px;
+
+        .title {
+            font-size: 20px;
+            font-weight: 700;
+            color: $black;
+        }
+
+        hr {
+            border: 0.4px solid $pagination-outline;
+            width: 90%;
+        }
+    }
+}
+
+.article-action-button {
+
+    span {
+        color: #848488;
+        font-size: 12px !important;
+        font-weight: 600;
+        margin-left: 12px;
+    }
+}
+
+.author {
+    column-gap: 12px;
+
+    img {
+        width: 24px !important;
+    }
+
+    span {
+        font-size: 12px;
+        color: $black;
+    }
+}
+
+.read-article {
+    display: flex;
+    flex-direction: column;
+    max-width: 635px;
+    gap: 36px;
+
+    .head-section {
+        .title {
+            font-size: 40px;
+            font-weight: 700;
+            line-height: 56px;
+            color: $black;
+            margin-bottom: 16px;
+        }
+    }
+
+    .thumbnail-article {
+        object-fit: cover;
+        max-width: 100%;
+        max-height: 338px;
+        border-radius: 10px;
+    }
+
+    .body-para {
+        font-weight: 400;
+        font-size: 18px;
+        line-height: 32px;
+        letter-spacing: 0.5%;
+        margin-bottom: 0;
+    }
+
+    .accordion {
+        padding: 32px !important;
+        border: 1px solid #BFC5CC;
+        border-radius: 10px;
+
+        .accordion-header {
+
+            .accordion-button {
+                font-size: 20px !important;
+                font-weight: 700 !important;
+                padding: 0;
+            }
+        }
+
+        .accordion-body {
+            padding: 0 !important;
+        }
+    }
+
+    .section-title {
+        font-size: 28px;
+        font-weight: 700;
+        line-height: 36px;
+    }
+
+    .unordered-list {
+        font-weight: 700;
+        font-size: 18px;
+        line-height: 32px;
+        margin-bottom: 0;
+    }
+
+    .table-of-contents {
+        margin-top: 24px;
+        display: flex;
+        flex-direction: column;
+        gap: 6px;
+
+        .parent,
+        .child {
+            font-size: 12px;
+            font-weight: 400;
+            color: $black;
+
+            &.active {
+                font-weight: 700;
+                color: $hoster-blue !important;
+            }
+        }
+
+        .parent {
+            padding: 12px 0;
+        }
+
+        .child {
+            padding: 6px 16px;
+        }
+    }
+
+    .footer-action {
+        a {
+            img {
+                width: 36px !important;
+            }
+
+            span {
+                font-size: 20px !important;
+                font-weight: 600 !important;
+            }
+        }
+    }
+
+}
+
+.subscribe__2 {
+    padding: 80px 0;
+
+    .subscribe-banner {
+        .content {
+            max-width: 555px;
         }
     }
 }

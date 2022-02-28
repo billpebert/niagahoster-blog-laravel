@@ -12,13 +12,13 @@ class item extends Component
      * @return void
      */
 
-    public $target, $title, $body;
+    public $target, $title;
 
-    public function __construct($target, $title, $body)
+    public function __construct($target, $title)
     {
         $this->target = $target;
         $this->title = $title;
-        $this->body = $body;
+        // $this->body = $body;
     }
 
     /**

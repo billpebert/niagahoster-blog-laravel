@@ -1,12 +1,14 @@
 <div class="article-detail d-flex align-items-center">
+    @if ($category != "")
     <div class="niaga-badge">
         {{ $category }}
     </div>
-    @if ($date != "")
-    <span>&#8226;</span>
-    <div class="date">{{ $date }}</div>
+    <x-atoms.single-dot/>
     @endif
-    <span>&#8226;</span>
+    @if ($date != "")
+    <div class="date">{{ $date }}</div>
+    <x-atoms.single-dot/>
+    @endif
     <div class="duration">
         {{ $time }} min read
     </div>

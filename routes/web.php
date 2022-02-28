@@ -18,3 +18,4 @@ use Illuminate\Support\Facades\Route;
 // });
 
 Route::view('/', 'pages.home')->name('home');
+Route::view('/article', 'pages.article-read')->name('article');

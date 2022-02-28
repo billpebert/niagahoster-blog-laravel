@@ -256,23 +256,39 @@ input::-ms-input-placeholder {
   background-position: calc(100% - 32px) center;
 }
 
-.btn-hoster-yellow {
+.btn-master, .btn-hoster-yellow-outline, .btn-hoster-yellow {
   padding: 12px 64px;
   border: none;
   border-radius: 100px;
-  background: #FF9800;
-  box-shadow: 0px 8px 10px rgba(255, 176, 77, 0.32);
   text-align: center;
   font-size: 20px;
-  color: #fff;
   font-weight: 700;
   transition: ease-out 300ms;
   position: relative;
+}
+
+.btn-hoster-yellow {
+  background: #FF9800;
+  box-shadow: 0px 8px 10px rgba(255, 176, 77, 0.32);
+  color: #fff;
 }
 .btn-hoster-yellow:hover {
   background: #ED8E01;
 }
 .btn-hoster-yellow:focus {
+  outline: 2.5px solid #fff;
+}
+
+.btn-hoster-yellow-outline {
+  background: transparent;
+  outline: 1px solid #FF9800;
+  color: #FF9800;
+}
+.btn-hoster-yellow-outline:hover {
+  color: #fff;
+  background: #FF9800;
+}
+.btn-hoster-yellow-outline:focus {
   outline: 2.5px solid #fff;
 }
 
@@ -290,6 +306,22 @@ input::-ms-input-placeholder {
   background-size: auto;
   color: #29384E;
   box-shadow: none;
+}
+
+.breadcrumb {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 6px;
+}
+.breadcrumb a {
+  color: #007AFF !important;
+  font-size: 12px;
+  font-weight: 400;
+}
+.breadcrumb a.active {
+  pointer-events: none;
+  color: #546071 !important;
 }
 
 a {
@@ -411,6 +443,11 @@ a:hover {
   color: #B8DAFE;
 }
 
+.single-dot {
+  font-size: 12px;
+  margin: 0 12px;
+}
+
 .title-section, .articles-preview .all-article-title, .articles-preview .article-section .head-section span {
   font-weight: 700;
   font-size: 32px;
@@ -421,17 +458,6 @@ a:hover {
 .articles-preview {
   padding: 80px 0;
   position: relative;
-}
-.articles-preview .author {
-  -moz-column-gap: 12px;
-       column-gap: 12px;
-}
-.articles-preview .author img {
-  width: 24px !important;
-}
-.articles-preview .author span {
-  font-size: 12px;
-  color: #29384E;
 }
 .articles-preview .article-content .content .title {
   font-size: 16px;
@@ -446,25 +472,6 @@ a:hover {
   color: #546071;
   max-width: 550px;
   letter-spacing: 2%;
-}
-.articles-preview .article-detail {
-  -moz-column-gap: 12px;
-       column-gap: 12px;
-  color: #29384E;
-  font-size: 12px;
-}
-.articles-preview .article-detail .date,
-.articles-preview .article-detail .duration {
-  width: -webkit-max-content;
-  width: -moz-max-content;
-  width: max-content;
-}
-.articles-preview .article-detail .niaga-badge {
-  letter-spacing: 0.5%;
-  color: #007AFF;
-  padding: 8px 16px;
-  border-radius: 99px;
-  background: #E0EFFF;
 }
 .articles-preview .article-section {
   padding: 0 0 80px;
@@ -506,26 +513,12 @@ a:hover {
   background: transparent;
   outline: 2px solid #ECECEC;
 }
-.articles-preview .subscribe {
-  border-radius: 24px;
-  padding: 36px;
-  background: linear-gradient(249.77deg, #0094FF -1.99%, #007DFF 43.52%, #026CE8 95.86%);
-  box-shadow: 0px 32px 72px rgba(0, 87, 178, 0.16);
-  gap: 46px;
-}
-.articles-preview .subscribe .title {
-  font-weight: 700;
-  font-size: 24px;
-  line-height: 32px;
-  color: #fff;
-}
-.articles-preview .subscribe .caption {
-  font-size: 16px;
-  color: #E0EFFF;
-}
 .articles-preview .all-article-title {
   padding-top: 80px;
   margin-bottom: 36px;
+}
+.articles-preview .subscribe-banner .content {
+  max-width: 438px !important;
 }
 .articles-preview .cards-all-article {
   row-gap: 56px;
@@ -603,4 +596,164 @@ a:hover {
 }
 .articles-preview .blog-category .accordion .accordion-item .accordion-button {
   padding: 16px 0 !important;
+}
+
+.subscribe-banner {
+  border-radius: 24px;
+  padding: 36px;
+  background: linear-gradient(249.77deg, #0094FF -1.99%, #007DFF 43.52%, #026CE8 95.86%);
+  box-shadow: 0px 32px 72px rgba(0, 87, 178, 0.16);
+  gap: 46px;
+}
+.subscribe-banner .content .title {
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 32px;
+  color: #fff;
+}
+.subscribe-banner .content .caption {
+  font-size: 16px;
+  color: #E0EFFF;
+}
+
+.article-detail {
+  color: #29384E;
+  font-size: 12px;
+}
+.article-detail .date,
+.article-detail .duration {
+  width: -webkit-max-content;
+  width: -moz-max-content;
+  width: max-content;
+}
+.article-detail .niaga-badge {
+  letter-spacing: 0.5%;
+  color: #007AFF;
+  padding: 8px 16px;
+  border-radius: 99px;
+  background: #E0EFFF;
+}
+
+.article-read {
+  padding: 54px 0 0;
+}
+.article-read .sitemap {
+  max-width: 255px;
+}
+.article-read .sitemap .title {
+  font-size: 20px;
+  font-weight: 700;
+  color: #29384E;
+}
+.article-read .sitemap hr {
+  border: 0.4px solid #D9DDE3;
+  width: 90%;
+}
+
+.article-action-button span {
+  color: #848488;
+  font-size: 12px !important;
+  font-weight: 600;
+  margin-left: 12px;
+}
+
+.author {
+  -moz-column-gap: 12px;
+       column-gap: 12px;
+}
+.author img {
+  width: 24px !important;
+}
+.author span {
+  font-size: 12px;
+  color: #29384E;
+}
+
+.read-article {
+  display: flex;
+  flex-direction: column;
+  max-width: 635px;
+  gap: 36px;
+}
+.read-article .head-section .title {
+  font-size: 40px;
+  font-weight: 700;
+  line-height: 56px;
+  color: #29384E;
+  margin-bottom: 16px;
+}
+.read-article .thumbnail-article {
+  -o-object-fit: cover;
+     object-fit: cover;
+  max-width: 100%;
+  max-height: 338px;
+  border-radius: 10px;
+}
+.read-article .body-para {
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 32px;
+  letter-spacing: 0.5%;
+  margin-bottom: 0;
+}
+.read-article .accordion {
+  padding: 32px !important;
+  border: 1px solid #BFC5CC;
+  border-radius: 10px;
+}
+.read-article .accordion .accordion-header .accordion-button {
+  font-size: 20px !important;
+  font-weight: 700 !important;
+  padding: 0;
+}
+.read-article .accordion .accordion-body {
+  padding: 0 !important;
+}
+.read-article .section-title {
+  font-size: 28px;
+  font-weight: 700;
+  line-height: 36px;
+}
+.read-article .unordered-list {
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 32px;
+  margin-bottom: 0;
+}
+.read-article .table-of-contents {
+  margin-top: 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+.read-article .table-of-contents .parent,
+.read-article .table-of-contents .child {
+  font-size: 12px;
+  font-weight: 400;
+  color: #29384E;
+}
+.read-article .table-of-contents .parent.active,
+.read-article .table-of-contents .child.active {
+  font-weight: 700;
+  color: #007AFF !important;
+}
+.read-article .table-of-contents .parent {
+  padding: 12px 0;
+}
+.read-article .table-of-contents .child {
+  padding: 6px 16px;
+}
+.read-article .footer-action a img {
+  width: 36px !important;
+}
+.read-article .footer-action a span {
+  font-size: 20px !important;
+  font-weight: 600 !important;
+}
+
+.subscribe__2 {
+  padding: 80px 0;
+}
+.subscribe__2 .subscribe-banner .content {
+  max-width: 555px;
 }/*# sourceMappingURL=niagahoster.css.map */

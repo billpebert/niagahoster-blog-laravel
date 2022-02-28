@@ -2,7 +2,7 @@
 
 @section('content')
 <div class="hero text-light">
-    <x-organisms.navbar/>
+    <x-organisms.navbar id="niaga-nav"/>
     <img src="{{ asset('assets/images/circular_ornament01.svg') }}" class="landing-ornament" alt="" />
 
     <x-molecules.banner-link/>
@@ -32,7 +32,7 @@
                     <x-organisms.articles/>
                 </div>
                 <div class="d-flex justify-content-center">
-                    <x-atoms.link href="#" class="toggle-allticle">
+                    <x-atoms.link href="{{ route('article') }}" class="toggle-allticle">
                         Lihat Semua Artikel
                     </x-atoms.link>
                 </div>
@@ -65,7 +65,13 @@
                     <div class="title">
                         Kategori Blog
                     </div>
-                    <x-molecules.accordion/>
+                    <x-molecules.accordion.index>
+                        <x-molecules.accordion.item target="catTutorial" title="Tutorial" body="Ini adalah tutorial tentang membuat blog sederhana..."/>
+                        <x-molecules.accordion.item target="catDigitalMarketing" title="Digital Marketing" body="Ini adalah tutorial tentang membuat blog sederhana..."/>
+                        <x-molecules.accordion.item target="catWebDev" title="Web Development & Design" body="Ini adalah tutorial tentang membuat blog sederhana..."/>
+                        <x-molecules.accordion.item target="catBisnis" title="Insight Bisnis" body="Ini adalah tutorial tentang membuat blog sederhana..."/>
+                        <x-molecules.accordion.item target="catNews" title="News & Update" body="Ini adalah tutorial tentang membuat blog sederhana..."/>
+                    </x-molecules.accordion.index>
                 </div>
             </div>
         </div>

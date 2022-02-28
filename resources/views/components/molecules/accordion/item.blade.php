@@ -14,7 +14,8 @@
     </h2>
     <div id="{{ $target }}" class="accordion-collapse collapse" data-bs-parent="#accordionHoster">
         <div class="accordion-body">
-            {!! $body !!}
+            {{-- {!! $body !!} --}}
+            {{ $slot }}
         </div>
     </div>
 </div>

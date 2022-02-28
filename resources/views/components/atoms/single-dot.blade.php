@@ -1,0 +1,1 @@
+<span class="single-dot">&#8226;</span>

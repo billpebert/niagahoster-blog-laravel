@@ -40,6 +40,7 @@ footer {
 
     .niaga-info {
         row-gap: 32px;
+        max-width: 255px;
 
         p {
             color: $white;
@@ -53,6 +54,10 @@ footer {
 
         .social-media-icon {
             gap: 18px;
+
+            .flex-column {
+                row-gap: 18px;
+            }
         }
 
     }
@@ -79,6 +84,21 @@ footer {
             font-size: 16px;
             outline: none;
             padding: 12px 40px !important;
+        }
+    }
+
+    .footnote {
+        margin-top: 62px;
+        padding-top: 32px;
+        border-top: 1px solid $dark;
+        font-size: 12px;
+
+        .left {
+            color: #c1c3c8;
+        }
+
+        .right {
+            color: $white;
         }
     }
 }

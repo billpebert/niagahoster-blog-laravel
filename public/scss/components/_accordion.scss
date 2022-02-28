@@ -1,0 +1,20 @@
+.accordion {
+    .accordion-header {
+        font-size: 14px;
+        font-weight: 600;
+        color: $black;
+
+        .accordion-button {
+            border: none;
+            box-shadow: none;
+
+            &:not(.collapsed),
+            &::after {
+                background-color: transparent;
+                background-size: auto;
+                color: $black;
+                box-shadow: none;
+            }
+        }
+    }
+}

@@ -93,6 +93,7 @@ footer .chapter .footer-link {
 }
 footer .niaga-info {
   row-gap: 32px;
+  max-width: 255px;
 }
 footer .niaga-info p {
   color: #fff;
@@ -105,6 +106,9 @@ footer .niaga-info p {
 }
 footer .niaga-info .social-media-icon {
   gap: 18px;
+}
+footer .niaga-info .social-media-icon .flex-column {
+  row-gap: 18px;
 }
 footer .newsletter {
   margin-top: 30px;
@@ -126,6 +130,18 @@ footer .newsletter .btn-hoster-yellow {
   font-size: 16px;
   outline: none;
   padding: 12px 40px !important;
+}
+footer .footnote {
+  margin-top: 62px;
+  padding-top: 32px;
+  border-top: 1px solid #546071;
+  font-size: 12px;
+}
+footer .footnote .left {
+  color: #c1c3c8;
+}
+footer .footnote .right {
+  color: #fff;
 }
 
 input::-moz-placeholder {
@@ -186,12 +202,29 @@ input::-ms-input-placeholder {
   color: #fff;
   font-weight: 700;
   transition: ease-out 300ms;
+  position: relative;
 }
 .btn-hoster-yellow:hover {
   background: #ED8E01;
 }
 .btn-hoster-yellow:focus {
   outline: 2.5px solid #fff;
+}
+
+.accordion .accordion-header {
+  font-size: 14px;
+  font-weight: 600;
+  color: #29384E;
+}
+.accordion .accordion-header .accordion-button {
+  border: none;
+  box-shadow: none;
+}
+.accordion .accordion-header .accordion-button:not(.collapsed), .accordion .accordion-header .accordion-button::after {
+  background-color: transparent;
+  background-size: auto;
+  color: #29384E;
+  box-shadow: none;
 }
 
 a {
@@ -212,7 +245,7 @@ a:hover {
 }
 
 .hero {
-  background: linear-gradient(249.77deg, #0094FF -1.99%, #007AFF 43.52%, #026CE8 95.86%), #F0F7FF;
+  background: linear-gradient(249.77deg, #0094FF -1.99%, #007DFF 43.52%, #026CE8 95.86%);
   padding: 24px 0 78px;
   position: relative;
   overflow: hidden;
@@ -260,11 +293,12 @@ a:hover {
 }
 
 .get-started {
-  background: linear-gradient(249.77deg, #0094FF -1.99%, #007AFF 43.52%, #026CE8 95.86%), #F0F7FF;
+  background: linear-gradient(249.77deg, #0094FF -1.99%, #007DFF 43.52%, #026CE8 95.86%);
   padding: 92px 0;
   position: relative;
   overflow: hidden;
   text-align: center;
+  position: relative;
 }
 .get-started .headline {
   position: relative;
@@ -345,12 +379,13 @@ a:hover {
   margin-bottom: 36px;
 }
 .articles-preview .article-section .articles .article-item {
-  -moz-column-gap: 60px;
-       column-gap: 60px;
   -webkit-user-select: none;
      -moz-user-select: none;
       -ms-user-select: none;
           user-select: none;
+}
+.articles-preview .article-section .articles .article-item .thumbnail {
+  margin-left: auto;
 }
 .articles-preview .article-section .articles .article-item .thumbnail img {
   width: 255px;

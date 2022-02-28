@@ -75,10 +75,11 @@
         .articles {
 
             .article-item {
-                column-gap: 60px;
+                // column-gap: 60px;
                 user-select: none;
 
                 .thumbnail {
+                    margin-left: auto;
 
                     img {
                         width: 255px;

@@ -64,20 +64,7 @@
                 </div>
             </div>
 
-            <div class="subscribe d-flex flex-wrap align-items-center justify-content-between">
-                <div>
-                    <div class="title">
-                        Ingin jadi yang pertama tau <br class="d-none d-md-block">
-                        artikel terbaru kami?
-                    </div>
-                    <div class="caption mt-3">
-                        Kami akan mengirimkan pemberitahuan artikel <br class="d-none d-md-block"> terbaru kami melalui email Anda. Ingin <br class="d-none d-md-block"> mendapatkan pemberitahuan?
-                    </div>
-                </div>
-                <x-atoms.link href="#!" class="btn-hoster-yellow">
-                    Langganan Sekarang
-                </x-atoms.link>
-            </div>
+            <x-molecules.banner-subs/>
 
             <section class="all-articles">
                 <div class="all-article-title">
@@ -124,77 +111,12 @@
                 <div class="title">
                     Kategori Blog
                 </div>
-                <div class="accordion accordion-flush" id="accordionFlushExample">
-                    <div class="accordion-item">
-                        <h2 class="accordion-header" id="flush-headingOne">
-                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseOne" aria-expanded="false" aria-controls="flush-collapseOne">
-                            Tutorial
-                        </button>
-                        </h2>
-                        <div id="flush-collapseOne" class="accordion-collapse collapse" aria-labelledby="flush-headingOne" data-bs-parent="#accordionFlushExample">
-                            <div class="accordion-body">Placeholder.</div>
-                        </div>
-                    </div>
-                    <div class="accordion-item">
-                        <h2 class="accordion-header" id="flush-headingTwo">
-                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseTwo" aria-expanded="false" aria-controls="flush-collapseTwo">
-                            Digital Marketing
-                        </button>
-                        </h2>
-                        <div id="flush-collapseTwo" class="accordion-collapse collapse" aria-labelledby="flush-headingTwo" data-bs-parent="#accordionFlushExample">
-                            <div class="accordion-body">Placeholder.</div>
-                        </div>
-                    </div>
-                    <div class="accordion-item">
-                        <h2 class="accordion-header" id="flush-headingThree">
-                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseThree" aria-expanded="false" aria-controls="flush-collapseThree">
-                            Web Development & Design
-                        </button>
-                        </h2>
-                        <div id="flush-collapseThree" class="accordion-collapse collapse" aria-labelledby="flush-headingThree" data-bs-parent="#accordionFlushExample">
-                            <div class="accordion-body">Placeholder.</div>
-                        </div>
-                    </div>
-                    <div class="accordion-item">
-                        <h2 class="accordion-header" id="flush-headingThree">
-                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseFourth" aria-expanded="false" aria-controls="flush-collapseFourth">
-                            Insight Bisnis
-                        </button>
-                        </h2>
-                        <div id="flush-collapseFourth" class="accordion-collapse collapse" aria-labelledby="flush-headingThree" data-bs-parent="#accordionFlushExample">
-                            <div class="accordion-body">Placeholder.</div>
-                        </div>
-                    </div>
-                    <div class="accordion-item">
-                        <h2 class="accordion-header" id="flush-headingThree">
-                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseFifth" aria-expanded="false" aria-controls="flush-collapseFifth">
-                            News & Update
-                        </button>
-                        </h2>
-                        <div id="flush-collapseFifth" class="accordion-collapse collapse" aria-labelledby="flush-headingThree" data-bs-parent="#accordionFlushExample">
-                            <div class="accordion-body">Placeholder.</div>
-                        </div>
-                    </div>
-                </div>
+                <x-molecules.accordion/>
             </div>
         </div>
     </div>
 </div>
 
-<div class="get-started">
-    <img src="{{ asset('assets/images/circular_ornament02.svg') }}" class="landing-ornament" alt="">
-
-    <div class="container-fluid">
-        <div class="headline">
-            Awali Kesuksesan Anda Bersama Niagahoster
-        </div>
-        <div class="caption">
-            Kini tidak lagi sulit mewujudkan website impian. Performa hebat, keamanan ekstra, dan layanan dukungan teknis yang bisa diandalkan - semua dengan harga terjangkau!
-        </div>
-        <x-atoms.link href="#!" class="btn-hoster-yellow">
-            Mulai Sekarang
-        </x-atoms.link>
-    </div> 
-</div>
+<x-molecules.get-started/>
 
 @endsection

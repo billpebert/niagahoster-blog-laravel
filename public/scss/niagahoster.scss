@@ -5,6 +5,7 @@
 @import 'components/footer';
 @import 'components/input';
 @import 'components/buttons';
+@import 'components/accordion';
 
 a {
     color: $white;
@@ -25,7 +26,7 @@ a {
 }
 
 .hero {
-    background: $header-background;
+    background: $card-background;
     padding: 24px 0 78px;
     position: relative;
     overflow: hidden;
@@ -78,11 +79,12 @@ a {
 }
 
 .get-started {
-    background: $header-background;
+    background: $card-background;
     padding: 92px 0;
     position: relative;
     overflow: hidden;
     text-align: center;
+    position: relative;
 
     .headline {
         position: relative;

@@ -93,33 +93,6 @@
         }
     }
 
-    .cards-all-article {
-        row-gap: 56px;
-
-        .flex-column {
-            row-gap: 12px;
-        }
-
-        .thumbnail-cards {
-            max-width: 255px;
-            object-fit: cover;
-            height: 136px;
-            border-radius: 5px;
-        }
-
-        .article-content {
-            max-width: 255px;
-
-            p.paragraph {
-                display: -webkit-box;
-                -webkit-line-clamp: 3;
-                -webkit-box-orient: vertical;
-                overflow: hidden;
-            }
-        }
-
-    }
-
     .page-pagination {
         column-gap: 18px;
         margin-top: 56px;
@@ -188,6 +161,47 @@
             }
         }
     }
+}
+
+.related-article {
+    padding: 80px 0;
+    background: #F5FAFF;
+
+    .heading {
+        font-size: 32px;
+        font-weight: 700;
+        color: $black;
+        text-align: center;
+        line-height: 42px;
+        margin-bottom: 36px;
+    }
+}
+
+.cards-vertical-article {
+    row-gap: 56px;
+
+    .flex-column {
+        row-gap: 12px;
+    }
+
+    .thumbnail-cards {
+        max-width: 255px;
+        object-fit: cover;
+        height: 136px;
+        border-radius: 5px;
+    }
+
+    .article-content {
+        max-width: 255px;
+
+        p.paragraph {
+            display: -webkit-box;
+            -webkit-line-clamp: 3;
+            -webkit-box-orient: vertical;
+            overflow: hidden;
+        }
+    }
+
 }
 
 .subscribe-banner {

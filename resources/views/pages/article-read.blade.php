@@ -77,9 +77,6 @@
                     <br><br>
                     Kalau begitu, bagaimana cara mengetahui hosting IP suatu website? Yuk, simak panduan lengkap cara cek IP web hosting di bawah ini!
                 </x-atoms.paragraph>
-                @php
-                    $tableContents = "<x-molecules.table-of-contents/>"
-                @endphp
                 <x-molecules.accordion>
                     <x-molecules.accordion.item target="daftarIsi" title="Daftar Isi">
                         <x-molecules.table-of-contents/>
@@ -145,7 +142,23 @@
     <div class="subscribe__2">
         <x-molecules.banner-subs/>
     </div>
+
 </div>
+
+<section class="related-article">
+    <div class="container">
+        <div class="heading">
+            Baca Artikel Terkait
+        </div>
+        <div class="row cards-vertical-article">
+            @for ($i = 0 ; $i < 4 ; $i++)
+            <div class="col-lg-3 col-md-4 col-12">
+                <x-organisms.vertical-article thumbnail="{{ asset('assets/images/illustration.png') }}" title="4+ Cara Mudah Cek IP Hosting Website" author="Nida Regita F" avatar="{{ asset('assets/images/user-1.png') }}" paragraph="Anda ingin tahu cara cek IP hosting? Selamat, Anda berada di halaman yang tepat! IP hosti..." category="Hosting" time="5" date="" />
+            </div>
+            @endfor
+        </div>
+    </div>
+</section>
 
 {{-- Section Blog / Articles --}}
 <div class="container">

@@ -1,13 +1,21 @@
 @extends('layouts.template')
 
 @section('content')
+
+
+@if (Request::get('page') < 2)
 <div class="hero text-light">
     <x-organisms.navbar id="niaga-nav"/>
-    <img src="{{ asset('assets/images/circular_ornament01.svg') }}" class="landing-ornament" alt="" />
-
+@else
+<div class="hero text-light py-0">
+    <x-organisms.navbar/>
+@endif
     <x-molecules.banner-link/>
 
+@if (Request::get('page') < 2)
+    <img src="{{ asset('assets/images/circular_ornament01.svg') }}" class="landing-ornament" alt="" />
     <x-molecules.header/>
+@endif
 </div>
 
 {{-- Section Blog / Articles --}}
@@ -45,7 +53,7 @@
                 <div class="all-article-title {{ Request::get('page') < 2 ? '' : 'pt-0' }}">
                     Semua Artikel
                 </div>
-                <div class="row cards-all-article">
+                <div class="row cards-vertical-article">
                     @for ($b = 1; $b < 13; $b++)
                     <div class="col-lg-4 col-12 col-md-6">
                         <x-organisms.vertical-article thumbnail="{{ asset('assets/images/illustration.png') }}" author="Nida Regita F" avatar="{{ asset('assets/images/user-1.png') }}" title="4+ Cara Mudah Cek IP Hosting Website" paragraph="Anda ingin tahu cara cek IP hosting? Selamat, Anda berada di halaman yang tepat! IP hosting adalah barisan angka sebagai identitas unik dari suatu hosting ..." category="Hosting" date="" time="5" />
@@ -66,11 +74,21 @@
                         Kategori Blog
                     </div>
                     <x-molecules.accordion.index>
-                        <x-molecules.accordion.item target="catTutorial" title="Tutorial" body="Ini adalah tutorial tentang membuat blog sederhana..."/>
-                        <x-molecules.accordion.item target="catDigitalMarketing" title="Digital Marketing" body="Ini adalah tutorial tentang membuat blog sederhana..."/>
-                        <x-molecules.accordion.item target="catWebDev" title="Web Development & Design" body="Ini adalah tutorial tentang membuat blog sederhana..."/>
-                        <x-molecules.accordion.item target="catBisnis" title="Insight Bisnis" body="Ini adalah tutorial tentang membuat blog sederhana..."/>
-                        <x-molecules.accordion.item target="catNews" title="News & Update" body="Ini adalah tutorial tentang membuat blog sederhana..."/>
+                        <x-molecules.accordion.item target="catTutorial" title="Tutorial">
+                            NiagaHoster Blog
+                        </x-molecules.accordion.item>
+                        <x-molecules.accordion.item target="catDigitalMarketing" title="Digital Marketing">
+                            NiagaHoster Blog
+                        </x-molecules.accordion.item>
+                        <x-molecules.accordion.item target="catWebDev" title="Web Development & Design">
+                            NiagaHoster Blog
+                        </x-molecules.accordion.item>
+                        <x-molecules.accordion.item target="catBisnis" title="Insight Bisnis">
+                            NiagaHoster Blog
+                        </x-molecules.accordion.item>
+                        <x-molecules.accordion.item target="catNews" title="News & Update">
+                            NiagaHoster Blog
+                        </x-molecules.accordion.item>
                     </x-molecules.accordion.index>
                 </div>
             </div>

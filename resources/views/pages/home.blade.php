@@ -65,7 +65,7 @@
 
         </div>
 
-        <div class="col-md-3 col-12">
+        <div class="col-md-3 col-12 d-none d-md-block">
             <div id="sidebar">
                 <x-atoms.input type="name" class="input-search w-100" name="search" placeholder="Cari artikel blog . . ." style="background-image: url('{{ URL::to('/') }}/assets/icons/ic-search.svg');"  />
 

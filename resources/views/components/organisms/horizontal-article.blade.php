@@ -4,7 +4,7 @@
         <x-atoms.article-content title="{{ $title }}" paragraph="{{ $paragraph }}" />
         <x-molecules.article-details category="{{ $category }}" date="{{ $date }}" time="{{ $time }}" />
     </div>
-    <div class="thumbnail">
+    <div class="thumbnail d-none d-md-block">
         <img src="{{ $thumbnail }}" alt="">
     </div>
     <x-atoms.link href="{{ $href }}" class="stretched-link"/>

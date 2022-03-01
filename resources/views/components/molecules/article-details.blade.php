@@ -1,4 +1,4 @@
-<div class="article-detail d-flex align-items-center">
+<div {{ $attributes->merge(['class'=>'article-detail d-flex align-items-center']) }} {{ $attributes }}>
     @if ($category != "")
     <div class="niaga-badge">
         {{ $category }}

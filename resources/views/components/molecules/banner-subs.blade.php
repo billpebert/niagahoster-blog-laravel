@@ -1,4 +1,4 @@
-<div class="subscribe-banner d-flex align-items-center justify-content-between">
+<div class="subscribe-banner d-flex flex-md-row flex-column align-items-center justify-content-between">
     <div class="content flex-shrink-1">
         <div class="title">
             Ingin jadi yang pertama tau

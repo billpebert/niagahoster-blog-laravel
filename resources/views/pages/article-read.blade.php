@@ -9,7 +9,7 @@
 <div class="container">
     <div class="row article-read position-relative" id="__wrapper">
 
-        <div class="col-md-3 col-12">
+        <div class="col-md-3 col-12 d-none d-md-block">
             <div class="sitemap d-flex flex-column gap-3" id="sidebar">
                 <x-molecules.breadcrumb>
                     <x-atoms.link href="{{ route('home') }}">
@@ -56,7 +56,7 @@
                     <div class="title">
                         4+ Cara Mudah Cek IP Hosting Website
                     </div>
-                    <div class="d-flex flex-row justify-content-between align-items-center">
+                    <div class="d-flex flex-row justify-content-between align-items-center flex-wrap gap-3">
                         <div class="d-flex align-items-center">
                             <x-atoms.author-profile name="Nida Regita F" avatar="{{ asset('assets/images/user-1.png') }}"/>
                             <x-atoms.single-dot/>

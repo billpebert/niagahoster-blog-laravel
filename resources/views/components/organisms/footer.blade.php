@@ -2,7 +2,7 @@
     <div class="container">
         <div class="row gx-2">
             <div class="col-lg-6 col-12">
-                <div class="d-flex gx-custom">
+                <div class="d-flex gx-custom flex-wrap">
                     <div class="d-flex flex-column">
                         <div class="chapter">
                             <div class="sub-link">
@@ -133,7 +133,7 @@
                 </div>
             </div>
             <div class="col-lg-6 col-12">
-                <div class="d-flex gx-custom">
+                <div class="d-flex gx-custom flex-wrap">
                     <div class="d-flex flex-column">
                         <div class="chapter">
                             <div class="sub-link">

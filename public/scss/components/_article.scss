@@ -107,6 +107,11 @@
             outline: 1px solid $pagination-outline;
             background: transparent;
 
+            @media (max-width: 500px) {
+                font-size: 14px;
+                padding: 12px 18px;
+            }
+
             &.active {
                 color: $white;
                 outline: none;
@@ -189,10 +194,20 @@
         object-fit: cover;
         height: 136px;
         border-radius: 5px;
+
+        @media (max-width: 500px) {
+            max-width: 100%;
+            height: auto;
+            padding: 0 24px;
+        }
     }
 
     .article-content {
         max-width: 255px;
+
+        @media (max-width: 500px) {
+            max-width: 100%;
+        }
 
         p.paragraph {
             display: -webkit-box;

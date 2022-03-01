@@ -1,4 +1,4 @@
-<div class="article-content">
+<div {{ $attributes->merge(['class'=>'article-content']) }} {{ $attributes }}>
     <div class="content">
         <div class="title">
             {{ $title }}

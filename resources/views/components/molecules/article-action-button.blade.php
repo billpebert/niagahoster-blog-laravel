@@ -3,10 +3,7 @@
         <img src="{{ asset('assets/icons/ic-thumb_up.svg') }}" alt="">
         <span>{{ $like }}</span>
     </x-atoms.link>
-    <x-atoms.link href="#!" class="d-inline-flex align-items-center">
-        <img src="{{ asset('assets/icons/ic-comment.svg') }}" alt="">
-        <span>{{ $comment }}</span>
-    </x-atoms.link>
+    <x-molecules.offcanvas-comment target="{{ $target }}" totalComment="{{ $totalComment }}" comment="{{ $comment }}"/>
     <x-atoms.link href="#!" class="d-inline-flex align-items-center {{ $addOnClass }}">
         <img src="{{ asset('assets/icons/ic-share.svg') }}" alt="">
         <span>Share</span>

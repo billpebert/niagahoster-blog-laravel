@@ -9,15 +9,14 @@
 @import 'components/accordion';
 @import 'components/breadcrumb';
 
-a {
-    color: $white;
-    text-decoration: none;
-    transition: all .3s;
+// a {
+//     text-decoration: none;
+//     transition: all .3s;
 
-    &:hover {
-        color: $white;
-    }
-}
+//     &:hover {
+//         color: $white;
+//     }
+// }
 
 .landing-ornament {
     position: absolute;
@@ -140,3 +139,4 @@ a {
 }
 
 @import 'components/article';
+@import 'components/offcanvas';

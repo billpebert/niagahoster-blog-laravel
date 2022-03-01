@@ -4,7 +4,7 @@ namespace App\View\Components\Molecules;
 
 use Illuminate\View\Component;
 
-class ArticleActionButton extends Component
+class OffcanvasComment extends Component
 {
     /**
      * Create a new component instance.
@@ -12,13 +12,11 @@ class ArticleActionButton extends Component
      * @return void
      */
 
-    public $like, $comment, $addOnClass, $target, $totalComment;
-    public function __construct($like, $comment, $addOnClass, $target, $totalComment)
+    public $target, $comment, $totalComment;
+    public function __construct($target, $comment, $totalComment)
     {
-        $this->like = $like;
-        $this->comment = $comment;
-        $this->addOnClass = $addOnClass;
         $this->target = $target;
+        $this->comment = $comment;
         $this->totalComment = $totalComment;
     }
 
@@ -29,6 +27,6 @@ class ArticleActionButton extends Component
      */
     public function render()
     {
-        return view('components.molecules.article-action-button');
+        return view('components.molecules.offcanvas-comment');
     }
 }

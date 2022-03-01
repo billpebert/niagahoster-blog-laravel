@@ -7,10 +7,10 @@
 </div>
 
 <div class="container">
-    <div class="row article-read">
+    <div class="row article-read position-relative" id="__wrapper">
 
         <div class="col-md-3 col-12">
-            <div class="sitemap d-flex flex-column gap-3">
+            <div class="sitemap d-flex flex-column gap-3" id="sidebar">
                 <x-molecules.breadcrumb>
                     <x-atoms.link href="{{ route('home') }}">
                         Home
@@ -30,7 +30,7 @@
                 <x-atoms.author-profile avatar="{{ asset('assets/images/user-1.png') }}" name="Nida Regita F"/>
                 <x-molecules.article-details category="" date="28 Dec 2021" time="5" />
                 <hr/>
-                <x-molecules.article-action-button like="218" comment="34" addOnClass="" />
+                <x-molecules.article-action-button like="218" comment="34" addOnClass="" target="offcanvas1" totalComment="15" />
             </div>
         </div>
         <div class="col-md-9 col-lg-7 col-12">
@@ -63,7 +63,7 @@
                             <x-molecules.article-details date="28 Dec 2021" category="" time="5"/>
                         </div>
                         <div>
-                            <x-molecules.article-action-button like="111" comment="4" addOnClass="" />
+                            <x-molecules.article-action-button like="111" comment="4" addOnClass="" target="offcanvas2" totalComment="15" />
                         </div>
                     </div>
                 </div>
@@ -131,7 +131,7 @@
                 </div>
 
                 <div class="footer-action">
-                    <x-molecules.article-action-button like="123" comment="4" addOnClass="ms-auto" />
+                    <x-molecules.article-action-button like="123" comment="4" addOnClass="ms-auto" target="offcanvas3" totalComment="15" />
                 </div>
 
             </div>
@@ -172,20 +172,31 @@
 
 @push('scripts')
 <script>
-var articles = $("#__articles");
-var category = $("#category");
+var wrapper = $("#__wrapper");
+var sidebar = $("#sidebar");
 
-console.log(articles.height())
-  $(function () {
+$(function () {
     $(document).scroll(function () {
-      if($(this).scrollTop() > articles.height() + 400){
-          category.addClass("position-relative").removeClass("category-bar");
-      }else if($(this).scrollTop() > category.height() + 200){
-          category.addClass("category-bar").removeClass("position-relative");
-      }else{
-          category.addClass("position-relative").removeClass("category-bar");
-      }
+        if ($(this).scrollTop() > wrapper.height() - 450) {
+            sidebar.css({
+                "position": "absolute",
+                "bottom": "0",
+                "opacity": "1"
+            });
+        } else if ($(this).scrollTop() > 600 && $(this).scrollTop() < wrapper.height() - 500 ) {
+            sidebar.css({
+                "position": "fixed",
+                "top": "50px",
+                "opacity": "1"
+            });
+        } else if($(this).scrollTop() < 350) {
+            sidebar.css({
+                "position": "relative",
+                "top": "0",
+                "opacity": "0"
+            });
+        }
     });
-  });
+});
 </script>
 @endpush

@@ -21,7 +21,7 @@
 {{-- Section Blog / Articles --}}
 <div class="container">
 
-    <div class="row articles-preview" id="__articles">
+    <div class="row articles-preview" id="__wrapper">
         <div class="col-md-9 col-12">
             @if (Request::get('page') < 2)
             <div class="article-section">
@@ -66,7 +66,7 @@
         </div>
 
         <div class="col-md-3 col-12">
-            <div id="category">
+            <div id="sidebar">
                 <x-atoms.input type="name" class="input-search w-100" name="search" placeholder="Cari artikel blog . . ." style="background-image: url('{{ URL::to('/') }}/assets/icons/ic-search.svg');"  />
 
                 <div class="blog-category">
@@ -102,20 +102,19 @@
 
 @push('scripts')
 <script>
-var articles = $("#__articles");
-var category = $("#category");
+var wrapper = $("#__wrapper");
+var sidebar = $("#sidebar");
 
-console.log(articles.height())
-  $(function () {
+$(function () {
     $(document).scroll(function () {
-      if($(this).scrollTop() > articles.height() + 400){
-          category.addClass("position-relative").removeClass("category-bar");
-      }else if($(this).scrollTop() > category.height() + 200){
-          category.addClass("category-bar").removeClass("position-relative");
-      }else{
-          category.addClass("position-relative").removeClass("category-bar");
-      }
+        if ($(this).scrollTop() > wrapper.height() + 400) {
+            sidebar.addClass("position-relative").removeClass("category-bar");
+        } else if ($(this).scrollTop() > sidebar.height() + 200) {
+            sidebar.addClass("category-bar").removeClass("position-relative");
+        } else {
+            sidebar.addClass("position-relative").removeClass("category-bar");
+        }
     });
-  });
+});
 </script>
 @endpush

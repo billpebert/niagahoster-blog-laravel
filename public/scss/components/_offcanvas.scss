@@ -1,0 +1,120 @@
+.offcanvas {
+
+    .offcanvas-header {
+        padding: 36px 30px 24px;
+
+        .offcanvas-title {
+            span {
+                font-weight: 700;
+                font-size: 20px !important;
+                color: $black;
+            }
+
+            span:nth-child(3) {
+                color: $hoster-blue;
+            }
+        }
+
+        .btn-close {
+            color: $black !important;
+        }
+    }
+
+    .offcanvas-body {
+        padding: 0 30px;
+        overflow-x: hidden;
+
+        .reply-placeholder {
+            padding: 24px 0;
+            border-bottom: 1px solid $pagination-outline;
+
+            textarea {
+                border-radius: 14px;
+                border: 1px solid $pagination-outline;
+            }
+        }
+
+        .reply-section {
+            padding: 24px 0;
+            row-gap: 12px;
+            border-bottom: 1px solid $pagination-outline;
+
+            .user-reply {
+                column-gap: 12px;
+
+                img {
+                    width: 40px;
+                    object-fit: cover;
+                }
+
+                .username {
+                    font-size: 16px;
+                    font-weight: 600;
+                    color: $black !important;
+                    display: flex;
+                    flex-direction: row;
+                    align-items: center;
+
+                    .single-dot {
+                        color: $black;
+                    }
+
+                    span.author-tag {
+                        font-size: 12px;
+                        font-weight: 400;
+                        color: $hoster-blue;
+                        margin-left: 0;
+                    }
+                }
+
+                .date {
+                    font-size: 12px;
+                    font-weight: 400;
+                    color: #7F8895;
+                }
+            }
+
+            .child-reply {
+                margin-left: 12px;
+                padding-left: 24px;
+                padding-top: 24px;
+                padding-bottom: 24px;
+                border-left: 2px solid $hoster-blue;
+                display: flex;
+                flex-direction: column;
+                row-gap: 12px;
+            }
+
+            .text {
+                font-size: 14px;
+                color: $black;
+
+                a {
+                    color: $hoster-blue;
+                }
+            }
+
+            .action-button {
+                .left {
+                    font-weight: 600;
+                    font-size: 12px !important;
+                    color: $dark;
+                }
+
+                .reply-hide {
+                    font-weight: 700 !important;
+                    font-size: 14px !important;
+                    color: $hoster-blue !important;
+                    letter-spacing: 2%;
+                    text-align: center;
+                }
+            }
+
+            hr {
+                text-align: center;
+                outline: 1px solid $pagination-outline;
+                width: 94%;
+            }
+        }
+    }
+}

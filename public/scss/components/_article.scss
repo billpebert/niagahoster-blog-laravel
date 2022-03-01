@@ -127,17 +127,6 @@
 
     }
 
-    .category-bar {
-        position: fixed;
-        top: 120px;
-        width: 310px;
-    }
-
-    .fixed-bottom {
-        position: absolute;
-        bottom: 50px;
-    }
-
     .blog-category {
         padding: 16px;
         margin-top: 36px;
@@ -161,6 +150,17 @@
             }
         }
     }
+}
+
+.category-bar {
+    position: fixed;
+    top: 120px;
+    width: 310px;
+}
+
+.fixed-bottom {
+    position: absolute;
+    bottom: 50px;
 }
 
 .related-article {
@@ -248,9 +248,12 @@
 
 .article-read {
     padding: 54px 0 0;
+    user-select: none;
 
     .sitemap {
         max-width: 255px;
+        opacity: 0;
+        transition: all .2s;
 
         .title {
             font-size: 20px;
@@ -398,7 +401,7 @@
 
     .subscribe-banner {
         .content {
-            max-width: 555px;
+            max-width: 555px !important;
         }
     }
 }

@@ -9,6 +9,7 @@
     position: relative;
 }
 
+a.btn-hoster-yellow,
 .btn-hoster-yellow {
     @extend .btn-master;
     background: $hoster-yellow;
@@ -24,6 +25,7 @@
     }
 }
 
+a.btn-hoster-yellow-outline,
 .btn-hoster-yellow-outline {
     @extend .btn-master;
     background: transparent;
@@ -31,11 +33,30 @@
     color: $hoster-yellow;
 
     &:hover {
-        color: $white;
+        color: $white !important;
         background: $hoster-yellow;
     }
 
     &:focus {
         outline: 2.5px solid $white;
     }
+}
+
+.btn-ghost-blue {
+    @extend .btn-master;
+    background: transparent;
+    color: $hoster-blue;
+    font-size: 14px !important;
+    padding: 12px 24px !important;
+    border-radius: 30px;
+
+    &:hover {
+        background: #F2F2F2;
+    }
+
+    &:focus {
+        background: transparent;
+        outline: 2px solid #ECECEC;
+    }
+
 }

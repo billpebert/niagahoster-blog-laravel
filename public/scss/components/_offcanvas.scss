@@ -31,6 +31,16 @@
             textarea {
                 border-radius: 14px;
                 border: 1px solid $pagination-outline;
+                transition: all .3s;
+
+                &:focus {
+                    outline: 2px solid $hoster-blue;
+                    box-shadow: none;
+                }
+            }
+
+            .btn-row {
+                margin-top: 36px;
             }
         }
 

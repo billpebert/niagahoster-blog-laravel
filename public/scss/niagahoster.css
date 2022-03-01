@@ -256,42 +256,6 @@ input::-ms-input-placeholder {
   background-position: calc(100% - 32px) center;
 }
 
-.btn-master, .btn-hoster-yellow-outline, .btn-hoster-yellow {
-  padding: 12px 64px;
-  border: none;
-  border-radius: 100px;
-  text-align: center;
-  font-size: 20px;
-  font-weight: 700;
-  transition: ease-out 300ms;
-  position: relative;
-}
-
-.btn-hoster-yellow {
-  background: #FF9800;
-  box-shadow: 0px 8px 10px rgba(255, 176, 77, 0.32);
-  color: #fff;
-}
-.btn-hoster-yellow:hover {
-  background: #ED8E01;
-}
-.btn-hoster-yellow:focus {
-  outline: 2.5px solid #fff;
-}
-
-.btn-hoster-yellow-outline {
-  background: transparent;
-  outline: 1px solid #FF9800;
-  color: #FF9800;
-}
-.btn-hoster-yellow-outline:hover {
-  color: #fff;
-  background: #FF9800;
-}
-.btn-hoster-yellow-outline:focus {
-  outline: 2.5px solid #fff;
-}
-
 .accordion .accordion-header {
   font-size: 14px;
   font-weight: 600;
@@ -796,6 +760,14 @@ input::-ms-input-placeholder {
 .offcanvas .offcanvas-body .reply-placeholder textarea {
   border-radius: 14px;
   border: 1px solid #D9DDE3;
+  transition: all 0.3s;
+}
+.offcanvas .offcanvas-body .reply-placeholder textarea:focus {
+  outline: 2px solid #007AFF;
+  box-shadow: none;
+}
+.offcanvas .offcanvas-body .reply-placeholder .btn-row {
+  margin-top: 36px;
 }
 .offcanvas .offcanvas-body .reply-section {
   padding: 24px 0;
@@ -866,4 +838,63 @@ input::-ms-input-placeholder {
   text-align: center;
   outline: 1px solid #D9DDE3;
   width: 94%;
+}
+
+.btn-master, .btn-ghost-blue, a.btn-hoster-yellow-outline,
+.btn-hoster-yellow-outline, a.btn-hoster-yellow,
+.btn-hoster-yellow {
+  padding: 12px 64px;
+  border: none;
+  border-radius: 100px;
+  text-align: center;
+  font-size: 20px;
+  font-weight: 700;
+  transition: ease-out 300ms;
+  position: relative;
+}
+
+a.btn-hoster-yellow,
+.btn-hoster-yellow {
+  background: #FF9800;
+  box-shadow: 0px 8px 10px rgba(255, 176, 77, 0.32);
+  color: #fff;
+}
+a.btn-hoster-yellow:hover,
+.btn-hoster-yellow:hover {
+  background: #ED8E01;
+}
+a.btn-hoster-yellow:focus,
+.btn-hoster-yellow:focus {
+  outline: 2.5px solid #fff;
+}
+
+a.btn-hoster-yellow-outline,
+.btn-hoster-yellow-outline {
+  background: transparent;
+  outline: 1px solid #FF9800;
+  color: #FF9800;
+}
+a.btn-hoster-yellow-outline:hover,
+.btn-hoster-yellow-outline:hover {
+  color: #fff !important;
+  background: #FF9800;
+}
+a.btn-hoster-yellow-outline:focus,
+.btn-hoster-yellow-outline:focus {
+  outline: 2.5px solid #fff;
+}
+
+.btn-ghost-blue {
+  background: transparent;
+  color: #007AFF;
+  font-size: 14px !important;
+  padding: 12px 24px !important;
+  border-radius: 30px;
+}
+.btn-ghost-blue:hover {
+  background: #F2F2F2;
+}
+.btn-ghost-blue:focus {
+  background: transparent;
+  outline: 2px solid #ECECEC;
 }/*# sourceMappingURL=niagahoster.css.map */

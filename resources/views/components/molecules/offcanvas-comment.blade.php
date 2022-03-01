@@ -14,7 +14,15 @@
     </div>
     <div class="offcanvas-body">
         <div class="reply-placeholder">
-            <textarea name="" id="" rows="4" class="form-control"></textarea>
+            <textarea name="" id="" rows="5" class="form-control"></textarea>
+            <div class="btn-row align-items-center gap-3 justify-content-end d-none">
+                <x-atoms.link href="#!" class="btn-ghost-blue">
+                    Cancel
+                </x-atoms.link>
+                <x-atoms.link href="#!" class="btn-hoster-yellow fs-6 px-4">
+                    Comment
+                </x-atoms.link>
+            </div>
         </div>
 
         @if ('slot')
@@ -87,7 +95,7 @@
                     <img src="{{ asset('assets/icons/ic-arrow_reply.svg') }}" alt="">
                     <span class="ms-0">1</span>
                 </div>
-                <x-atoms.link href=!# class="reply-hide">
+                <x-atoms.link href=#! class="reply-hide">
                     Sembunyikan Balasan
                 </x-atoms.link>
             </div>
@@ -107,7 +115,7 @@
                     </div>
                 </div>
                 <div class="text d-flex flex-wrap">
-                    Bisa melakukan pengecekan melalui Urlvoid atau fitur secamanya, bisa juga melalui google di url <x-atoms.link href="!#" class="url">
+                    Bisa melakukan pengecekan melalui Urlvoid atau fitur secamanya, bisa juga melalui google di url <x-atoms.link href="#!" class="url">
                     http://www.google.com/safebrowsing/diagnostic?site=namasiteanda
                     </x-atoms.link>
                 </div>
@@ -123,3 +131,11 @@
         </div>
     </div>
 </div>
+
+@push('scripts')
+<script>
+    $("textarea").focus(function(){
+        $(".btn-row").addClass("d-flex").removeClass("d-none");
+    })
+</script>
+@endpush
